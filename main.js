@@ -65,6 +65,9 @@ const progress = [
     {
         title: 'stockport'
     },
+    {
+        title: 'bury'
+    },
 ]
 
 function renderBorough(i) {
