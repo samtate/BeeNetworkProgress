@@ -7,21 +7,31 @@ const progress = [
                 name: 'Chorlton Cycleway',
                 currentState: 3,
                 worksStart: 'TBC',
-                worksEnd: 'TBC'
+                worksEnd: 'TBC',
+                details: 'The 5km route will run along Barlow Moor Road, Manchester Road, Upper Chorlton Road and Chorlton Road, linking with existing routes and continuing to the city centre. Chorlton will be one of the first routes to be built and will provide a high-quality, segregated link between Chorlton and Manchester city centre, making it safer, more attractive and easier to get around.',
+                links: [
+                    {
+                        title: 'Manchester City Council',
+                        href: 'https://secure.manchester.gov.uk/info/200024/consultations_and_surveys/7699/manchester_to_chorlton_cycling_and_walking_route_proposals'
+                    }
+                ]
             },
             {
+                id: 'piccvic',
                 name: 'Piccadilly to Victoria Cycleway',
                 currentState: 1,
                 worksStart: 'TBC',
                 worksEnd: 'TBC'
             },
             {
+                id: 'ancoats',
                 name: 'Ancoats Cycleway',
                 currentState: 1,
                 worksStart: 'TBC',
                 worksEnd: 'TBC'
             },
             {
+                id: 'princessrd',
                 name: 'Princess Road Roundabout',
                 currentState: 5,
                 worksStart: 'Sept 2019',
@@ -34,11 +44,13 @@ const progress = [
         schemes: [
             {
                 name: 'Talbot Road/Chester Road Junction',
+                currentState: 1,
                 worksStart: 'TBC',
                 worksEnd: 'TBC'
             },
             {
                 name: 'Urmston Active Neighbourhood',
+                currentState: 1,
                 worksStart: 'TBC',
                 worksEnd: 'TBC'
             }
@@ -106,7 +118,18 @@ function renderBorough(i) {
                             </button>
                         </div>
                         <div class="infobox" id="info-${scheme.id}">
-                            <p>Info!</p>
+                            <div class="infodetails">
+                                <h3>Scheme Details:</h3>
+                                <p>${scheme.details}</p>
+                            </div>
+                            <div class="infolinks">
+                                <h3>Scheme Links</h3>
+                                <ul>
+                                    ${scheme.links? scheme.links.map(link => `
+                                        <li><a href="${link.href}">${link.title}</a></li>
+                                    `).join(''):''}
+                                <ul>
+                            </div>
                         </div>
                     </div>
                 `).join(''):''}

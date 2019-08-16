@@ -209,6 +209,7 @@ select {
     background-color: #ffe033;
     color: #38618C;
     transition: 0.3s ease all;
+    margin-right: 15px;
 }
 .moreinfo span {
     font-size: 50px;
@@ -224,7 +225,17 @@ select {
 .infobox {
     display: none;
     height: 200px;
+    padding: 0 60px;
+    font-family: 'Raleway';
 }
 .infobox.active {
-    display: block;
+    display: flex;
+}
+.infodetails {
+    width: 70%;
+    padding-right: 30px;
+}
+.infolinks {
+    width: 30%;
+    padding-left: 30px;
 }
