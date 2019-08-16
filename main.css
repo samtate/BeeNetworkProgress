@@ -66,6 +66,7 @@ select {
     width: 100%;
     height: 350px;
     position: relative;
+    box-shadow: 3px 0px 5px 1px rgba(0,0,0,0.75);
 }
 .boroughheader h1 {
     font-family: 'Raleway', sans-serif;
@@ -114,6 +115,21 @@ select {
     font-size: 20px;
     text-align: center;
 }
+.statsbox {
+    width: 170px;
+}
+.statsbox h3 {
+     margin: 0;
+}
+.statsbox p {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    text-align: center;
+}
+.statsbox p:first-of-type {
+    margin-bottom: 10px;
+}
 .box {
     display: flex;
     flex-direction: column;
@@ -149,9 +165,6 @@ select {
     font-size: 18px;
     width: 300px;
 }
-.progressbarcontainer {
-
-}
 .progressbar {
     width: 300px;
     padding: 0;
@@ -159,7 +172,7 @@ select {
 }
 .progressbar li {
     list-style-type: none;
-    width: 14%;
+    width: 16.65%;
     float: left;
     font-size: 12px;
     position: relative;
@@ -194,9 +207,6 @@ select {
 .progressbar li:first-child:after {
     content: none;
 }
-.progressbar li.active {
-    color: green;
-}
 .progressbar li.active:before {
     border-color: #55b776;
 }
@@ -207,8 +217,12 @@ select {
     width: 50px;
     height: 50px;
     border-radius: 25px;
+    border: 0;
     background-color: #ffe033;
-    color: #38618C;
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+    background-position: center;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjQgMTBoLTEwdi0xMGgtNHYxMGgtMTB2NGgxMHYxMGg0di0xMGgxMHoiLz48L3N2Zz4=);
     transition: 0.3s ease all;
     margin-right: 15px;
     outline: none;
