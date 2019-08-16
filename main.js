@@ -161,11 +161,11 @@ function renderBorough(i) {
                                 </div>
                             </div>
                             <div class="box">
-                                <span class="boxheader worksheader">Works Start:</span>
+                                <span class="boxheader worksheader">Works ${scheme.currentState === 5? `Started`:`Start`}:</span>
                                 <span class="boxcontent workscontent">${scheme.worksStart}</span>
                             </div>
                             <div class="box">
-                                <span class="boxheader worksheader">Works End:</span>
+                                <span class="boxheader worksheader">Works ${scheme.currentState === 5? `Ended`:`End`}:</span>
                                 <span class="boxcontent workscontent">${scheme.worksEnd}</span>
                             </div>
                             <button class="moreinfo" id="btn-${scheme.id}" onclick="toggleBtn('${scheme.id}')"> </button>
