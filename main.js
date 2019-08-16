@@ -92,7 +92,25 @@ const progress = [
         title: 'bolton'
     },
     {
-        title: 'wigan'
+        title: 'wigan',
+        schemes: [
+            {
+                id: 'muddymile',
+                name: '\"Muddy Mile\" Canal Path',
+                cost: '£0.2m',
+                type: 'Canal Path',
+                currentState: 5,
+                worksStart: 'May 2019',
+                worksEnd: 'Aug 2019',
+                details: 'The £212,000 project will deliver the much-needed one mile stretch of surface improvements, as well as better access and signage, plugging a vital gap in the Bridgewater Way. The works will allow people to cycle on the canal path all the way from Wigan Pier, through Leigh and across the Salford boundary to Monton and Patricroft.',
+                links: [
+                    {
+                        title: 'Completion',
+                        href: 'https://twitter.com/martinkeyBC/status/1156535893114654720'
+                    }
+                ]
+            }
+        ]
     },
     {
         title: 'tameside'
