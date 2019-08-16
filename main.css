@@ -75,8 +75,8 @@ select {
     color: white;
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    left: 20%;
+    transform: translate(-20%,-50%);
     margin: 0;
     text-shadow: 3px 3px 3px #000000;
 }
@@ -92,6 +92,7 @@ select {
     color: #38618C;
     transition: all 0.3s ease;
     height: 100px;
+    overflow: hidden;
 }
 .schemebox.active {
     height: 318px;
@@ -210,6 +211,7 @@ select {
     color: #38618C;
     transition: 0.3s ease all;
     margin-right: 15px;
+    outline: none;
 }
 .moreinfo span {
     font-size: 50px;
@@ -219,17 +221,18 @@ select {
 }
 .moreinfo.active {
     background-color: red !important;
-    color: white !important;
     transform: rotate(45deg) !important;
 }
 .infobox {
-    display: none;
+    display: flex;
     height: 200px;
     padding: 0 60px;
     font-family: 'Raleway';
+    opacity: 0;
+    transition: 0.6s ease all;
 }
 .infobox.active {
-    display: flex;
+    opacity: 1;
 }
 .infodetails {
     width: 70%;
@@ -238,4 +241,8 @@ select {
 .infolinks {
     width: 30%;
     padding-left: 30px;
+}
+.infolinks ul {
+    list-style-type: none;
+    padding: 0;
 }

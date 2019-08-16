@@ -11,7 +11,7 @@ const progress = [
                 details: 'The 5km route will run along Barlow Moor Road, Manchester Road, Upper Chorlton Road and Chorlton Road, linking with existing routes and continuing to the city centre. Chorlton will be one of the first routes to be built and will provide a high-quality, segregated link between Chorlton and Manchester city centre, making it safer, more attractive and easier to get around.',
                 links: [
                     {
-                        title: 'Manchester City Council',
+                        title: 'Manchester City Council - Scheme Page',
                         href: 'https://secure.manchester.gov.uk/info/200024/consultations_and_surveys/7699/manchester_to_chorlton_cycling_and_walking_route_proposals'
                     }
                 ]
@@ -180,7 +180,7 @@ function toggleBtn(id) {
         schemebox.classList.add('active');
         setTimeout(() => {       
             info.classList.add('active');
-        }, 300);
+        }, 0);
     }
 }
 
