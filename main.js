@@ -72,10 +72,20 @@ const progress = [
         title: 'trafford',
         schemes: [
             {
-                name: 'Talbot Road/Chester Road Junction',
+                id: 'talbotrdjunctions',
+                name: 'Talbot Road Junction Upgrades',
+                cost: '£1.35m',
+                type: 'Three Upgraded Junctions',
                 currentState: 0,
                 worksStart: 'TBC',
-                worksEnd: 'TBC'
+                worksEnd: 'TBC',
+                details: 'To further enhance the cycle facilities currently under construction on Talbot Road, this project will significantly upgrade the junctions at Chester Road, White City Way, and Great Stone Road, including dedicated crossings for people travelling on foot and by bike.',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://www.manchestereveningnews.co.uk/news/greater-manchester-news/cycling-walking-masterplan-routes-chorlton-14930463'
+                    }
+                ]
             },
             {
                 name: 'Urmston Active Neighbourhood',
@@ -86,10 +96,83 @@ const progress = [
         ]
     },
     {
-        title: 'salford'
+        title: 'salford',
+        schemes: [
+            {
+                id: 'swintonwalkdenjunctions',
+                name: 'Junctions in Swinton and Walkden',
+                cost: '£1.1m',
+                type: 'Two Upgraded Junctions',
+                currentState: 0,
+                worksStart: 'TBC',
+                worksEnd: 'TBC',
+                details: 'An extra £1.1 million from the Mayor’s Challenge Fund to existing proposed improvements as part of the Local Growth Deal Salford Bolton Improvement Programme at two key junctions.',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://www.manchestereveningnews.co.uk/news/greater-manchester-news/cycling-walking-masterplan-routes-chorlton-14930463'
+                    }
+                ]
+            },
+            {
+                id: 'broadstfrederickrd',
+                name: 'Broad St/Frederick Rd Junction',
+                cost: '£0.6m',
+                type: 'Upgraded Junction',
+                currentState: 0,
+                worksStart: 'TBC',
+                worksEnd: 'TBC',
+                details: ' An additional £600,000 for people travelling by bike or on foot at a major junction along the A6 that was already due to be upgraded as part of the Local Growth Deal Salford Bolton Network Improvement Programme.',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://www.manchestereveningnews.co.uk/news/greater-manchester-news/cycling-walking-masterplan-routes-chorlton-14930463'
+                    }
+                ]
+            },
+            {
+                id: 'chapelste',
+                name: 'Chapel Street East',
+                cost: '£4.3m',
+                type: '0.3km Superhighway and Public Realm',
+                currentState: 2,
+                worksStart: 'Late 2019',
+                worksEnd: 'TBC',
+                details: 'This scheme is the first stage of a complete transformation of Chapel Street East. It will provide protected 2 metre-wide cycle tracks in each direction and priority for pedestrians and cyclists at side roads.',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://www.manchestereveningnews.co.uk/news/greater-manchester-news/cycling-walking-masterplan-routes-chorlton-14930463'
+                    },
+                    {
+                        title: 'Consultation Page',
+                        href: 'https://www.salford.gov.uk/chapelstreeteast?utm_source=Twitter&utm_medium=social&utm_campaign=SocialSignIn'
+                    }
+                ]
+            }
+        ]
     },
     {
-        title: 'bolton'
+        title: 'bolton',
+        schemes: [
+            {
+                id: 'b6226',
+                name: 'B6226 Parallel Quiet Route',
+                cost: '£1.5m',
+                type: '4.5km Quietway',
+                currentState: 0,
+                worksStart: 'TBC',
+                worksEnd: 'TBC',
+                details: 'A high quality walking and cycling route to the town centre, running parallel to the much busier Chorley Old Road. The project includes signed quiet routes, improved crossings and routes through parks and public spaces',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://www.manchestereveningnews.co.uk/news/greater-manchester-news/cycling-walking-masterplan-routes-chorlton-14930463'
+                    }
+                ]
+            }
+            
+        ]
     },
     {
         title: 'wigan',
@@ -109,23 +192,181 @@ const progress = [
                         href: 'https://twitter.com/martinkeyBC/status/1156535893114654720'
                     }
                 ]
+            },
+            {
+                id: 'victoriastwarringtonrd',
+                name: 'Victoria Street/Warrington Road Junction',
+                cost: '£0.7m',
+                type: 'Junction Upgrade',
+                currentState: 1,
+                worksStart: '2020',
+                worksEnd: '2020',
+                details: 'Extends the Saddle Junction cycle facility, which is under construction, to the southwest, adding more cycling and walking infrastructure connecting with Alexandra Park.',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://www.manchestereveningnews.co.uk/news/greater-manchester-news/cycling-walking-masterplan-routes-chorlton-14930463'
+                    },
+                    {
+                        title: 'Consultation',
+                        href: 'https://www.wigan.gov.uk/Resident/Parking-Roads-Travel/Travel/Mayors-Challenge-Fund.aspx'
+                    }
+                ]
             }
         ]
     },
     {
-        title: 'tameside'
+        title: 'tameside',
+        schemes: [
+            {
+                id: 'tamesidenewroutes',
+                name: 'New Routes in Tameside',
+                cost: '£0.5m',
+                type: 'Traffic Free & Segregated Links',
+                currentState: 0,
+                worksStart: 'TBC',
+                worksEnd: 'TBC',
+                details: 'Includes filtered neighbourhoods where people are prioritised over cars. Upgrades will also be made to traffic free routes and segregated facilities will be provided for bikes on more major roads.',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://www.manchestereveningnews.co.uk/news/greater-manchester-news/cycling-walking-masterplan-routes-chorlton-14930463'
+                    }
+                ]
+            }
+        ]
     },
     {
-        title: 'rochdale'
+        title: 'rochdale',
+        schemes: [
+            {
+                id: 'castletoncycleway',
+                name: 'Castleton to Rochdale Cycleway',
+                cost: '£11.9m',
+                type: '2.9km Superhighway',
+                currentState: 0,
+                worksStart: 'TBC',
+                worksEnd: 'TBC',
+                details: 'A major boost to the high street in the local centre in Castleton including high quality, dedicated facilities for walking and cycling, and improved access to Castleton station. Announced in two phases, has one entry here for simplicity.',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://www.manchestereveningnews.co.uk/news/greater-manchester-news/cycling-walking-masterplan-routes-chorlton-14930463'
+                    }
+                ]
+            }
+        ]
     },
     {
-        title: 'oldham'
+        title: 'oldham',
+        schemes: [
+            {
+                id: 'kingstbridge',
+                name: 'King Street Bridge',
+                cost: '£0.65m',
+                type: 'Bridge Refurbishment',
+                currentState: 0,
+                worksStart: 'TBC',
+                worksEnd: 'TBC',
+                details: 'Complete refurbishment of an existing pedestrian and cycle bridge, providing a key link into Oldham town centre from a number of residential areas to the south.',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://www.manchestereveningnews.co.uk/news/greater-manchester-news/cycling-walking-masterplan-routes-chorlton-14930463'
+                    }
+                ]
+            },
+            {
+                id: 'unionstbridge',
+                name: 'Union Street West Bridge',
+                cost: '£0.2m',
+                type: 'Bridge Refurbishment',
+                currentState: 0,
+                worksStart: 'TBC',
+                worksEnd: 'TBC',
+                details: 'Already partially refurbished, the bride The bridge has already been the subject of a partial refurbishment. This project will see the refurbishment completed, providing a replacement bridge deck surface to ensure the best possible level of service for users.',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://www.manchestereveningnews.co.uk/news/greater-manchester-news/cycling-walking-masterplan-routes-chorlton-14930463'
+                    }
+                ]
+            }
+        ]
     },
     {
-        title: 'stockport'
+        title: 'stockport',
+        schemes: [
+            {
+                id: 'gilbentrd',
+                name: 'Gilbent Road Crossing',
+                cost: '£0.11m',
+                type: 'Upgraded Crossing',
+                currentState: 0,
+                worksStart: 'TBC',
+                worksEnd: 'TBC',
+                details: 'An enhanced crossing for people travelling by bike and on foot in Cheadle Hulme. It will better connect residential areas, including access to Thorn Grove Primary School.',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://www.manchestereveningnews.co.uk/news/greater-manchester-news/cycling-walking-masterplan-routes-chorlton-14930463'
+                    }
+                ]
+            },
+            {
+                id: 'brinnington',
+                name: 'Brinnington to Stockport Centre',
+                cost: '£0.11m',
+                type: 'Upgaded Bridleway and Underpass',
+                currentState: 0,
+                worksStart: 'TBC',
+                worksEnd: 'TBC',
+                details: 'Linking to improvements taking place across Stockport through the Town Centre Access Plan (TCAP), this project will upgrade a footpath to bridleway status as well as the refurbishment of an existing M60 underpass with new lighting and resurfacing.',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://www.manchestereveningnews.co.uk/news/greater-manchester-news/cycling-walking-masterplan-routes-chorlton-14930463'
+                    }
+                ]
+            }
+        ]
     },
     {
-        title: 'bury'
+        title: 'bury',
+        schemes: [
+            {
+                id: 'metrolinkcycleparking',
+                name: 'Metrolink Cycle Parking',
+                cost: '£1.2m',
+                type: 'Cycle parking',
+                currentState: 0,
+                worksStart: 'TBC',
+                worksEnd: 'TBC',
+                details: 'Cycle parking facilities on the Bury Metrolink line: Covered Sheffield stands with lighting and CCTV will be installed in highly visible and accessible locations at nine stops.',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://www.manchestereveningnews.co.uk/news/greater-manchester-news/cycling-walking-masterplan-routes-chorlton-14930463'
+                    }
+                ]
+            },
+            {
+                id: 'upgradedcrossingsbury',
+                name: 'New/Upgraded Crossings',
+                cost: '£2.6m',
+                type: 'Upgraded Crossings & Junctions',
+                currentState: 0,
+                worksStart: 'TBC',
+                worksEnd: 'TBC',
+                details: '16 new and upgraded crossings and junctions in Bury: A mix of new and upgraded junctions at key locations.',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://www.manchestereveningnews.co.uk/news/greater-manchester-news/cycling-walking-masterplan-routes-chorlton-14930463'
+                    }
+                ]
+            }
+        ]
     },
 ]
 
@@ -151,7 +392,7 @@ function renderBorough(i) {
                             </div>
                             <div class="box statebox">
                                 <span class="boxheader stateheader">Current State:</span>
-                                <span class="boxcontent statecontent">${getStateText(scheme.currentState)}</span>
+                                <span class="boxcontent statecontent">${getStateText(scheme.currentState, scheme.currentState===1 ? scheme.links[1].href : false)}</span>
                                 <div class="progressbarcontainer">
                                     <ul class="progressbar">
                                         ${[...Array(6).keys()].map((i)=>`
@@ -176,8 +417,8 @@ function renderBorough(i) {
                                 <p>${scheme.details}</p>
                             </div>
                             <div class="infolinks">
+                                <h3>Scheme Links</h3>
                                 ${scheme.links? scheme.links.map(link => `
-                                    <h3>Scheme Links</h3>
                                         <ul>
                                             <li><a href="${link.href}">${link.title}</a></li>
                                         </ul>
@@ -194,13 +435,13 @@ function renderBorough(i) {
     document.getElementById('content').innerHTML = contentMarkup;
 }
 
-function getStateText(currentState) {
+function getStateText(currentState, consultationLink) {
     switch (currentState) {
         case 0:
             return 'Design, Awaiting Consultation'
             break;
         case 1:
-            return 'Consultation [Link]'
+            return `<a href="${consultationLink}">Consultation</a>`
             break;
         case 2:
             return 'Awaiting Consultation Report'
