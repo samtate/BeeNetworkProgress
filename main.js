@@ -35,14 +35,14 @@ const progress = [
                 ]
             },
             {
-                id: 'ancoats',
-                name: 'Ancoats Cycleway',
-                cost: '£13.2m',
-                type: '2.1km Quietway + Bridges',
+                id: 'levy',
+                name: 'Levenshulme Active Neighbourhood',
+                cost: '£2.5m',
+                type: 'Active Neighbourhood: Crossings/Modal Filters',
                 currentState: 0,
                 worksStart: 'TBC',
                 worksEnd: 'TBC',
-                details: 'The Northern and Eastern Gateway will become the second city centre cycling and walking corridor to be funded by the Greater Manchester Mayor’s Challenge Fund.  The route will connect the neighbourhoods of Ancoats, New Islington, New Cross, New Town, Redbank and the Green Quarter by creating a high-quality, continuous east-west walking and cycling route for the north and east city centre fringe.',
+                details: 'The creation of an active neighbourhood in Levenshulme, where the movement of people is prioritised over the movement of motor traffic. The project includes a series of signalised and minor junction upgrades, parallel crossings, modal filters and investment in streetscapes to create a nicer environment for local trips on foot or by bike.',
                 links: [
                     {
                         title: 'Annoucement',
@@ -63,9 +63,29 @@ const progress = [
                     {
                         title: 'Annoucement',
                         href: 'https://secure.manchester.gov.uk/news/article/8146/manchester_welcomes_bee_network_funding_boost_for_new_cycling_and_walking_schemes'
+                    },
+                    {
+                        title: 'Council Details Page',
+                        href: 'https://secure.manchester.gov.uk/info/500352/roadworks_and_closures/7771/princess_road_and_medlock_street_roundabout_improvement_scheme'
                     }
                 ]
-            }
+            },
+            {
+                id: 'ancoats',
+                name: 'Ancoats Cycleway',
+                cost: '£13.2m',
+                type: '2.1km Quietway + Bridges',
+                currentState: 0,
+                worksStart: 'TBC',
+                worksEnd: 'TBC',
+                details: 'The Northern and Eastern Gateway will become the second city centre cycling and walking corridor to be funded by the Greater Manchester Mayor’s Challenge Fund.  The route will connect the neighbourhoods of Ancoats, New Islington, New Cross, New Town, Redbank and the Green Quarter by creating a high-quality, continuous east-west walking and cycling route for the north and east city centre fringe.',
+                links: [
+                    {
+                        title: 'Annoucement',
+                        href: 'https://secure.manchester.gov.uk/news/article/8190/manchester_welcomes_proposed_4m_bee_network_boost_for_cycling_and_walking_in_the_city_centre'
+                    }
+                ]
+            },
         ]
     },
     {
@@ -88,10 +108,20 @@ const progress = [
                 ]
             },
             {
-                name: 'Urmston Active Neighbourhood',
+                id: 'traffordpark',
+                name: 'Trafford Park Cycleway',
+                cost: '£2.8m',
+                type: '2.4km Superhighway + Junctions',
                 currentState: 0,
                 worksStart: 'TBC',
-                worksEnd: 'TBC'
+                worksEnd: 'TBC',
+                details: 'Leading to more local trips on foot and by bike, this project focuses on enhancing the experience of key journeys across Stretford, Trafford Park, Old Trafford and Salford Quays. It will deliver 1.2 miles of segregated cycle lanes, 320 metres of shared use footway, two signalized junction upgrades, four parallel crossings and the conversion of a motor vehicular lane to a junction that works for people travelling on foot and by bike. It also includes cycle parking.',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://www.forbes.com/sites/carltonreid/2019/03/21/cyclesnake-style-bridge-planned-for-stockport-as-part-of-bee-network-proposals/#1557b885243d'
+                    }
+                ]
             }
         ]
     },
@@ -234,6 +264,54 @@ const progress = [
                     },
                     
                 ]
+            },
+            {
+                id: 'bartonaqueduct',
+                name: 'Barton Aqueduct',
+                cost: '£5.3m',
+                type: 'Traffic Free Route + Bridge',
+                currentState: 0,
+                worksStart: 'TBC',
+                worksEnd: 'TBC',
+                details: 'This project will create a new traffic-free route between Salford and Trafford Park. This includes reinstating a historic raised towpath across the Barton aqueduct, two new ramps, towpath widening and surface improvements. Completing a key gap in the Bridgewater Way route, this scheme will link residential communities in Salford with major employment, retail and leisure opportunities in Trafford Park.',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://www.forbes.com/sites/carltonreid/2019/03/21/cyclesnake-style-bridge-planned-for-stockport-as-part-of-bee-network-proposals/#1557b885243d'
+                    }
+                ]
+            },
+            {
+                id: 'liverpoolst',
+                name: 'Liverpool Street',
+                cost: '£6.4m',
+                type: '2.3km Superhighway + Junctions/Public Realm',
+                currentState: 0,
+                worksStart: 'TBC',
+                worksEnd: 'TBC',
+                details: 'Creating a continuous safe link between Salford Quays and Manchester city centre, this project enhances the existing Liverpool Street corridor proposals, creating a safe and attractive environment for those travelling on foot or by bike. The project will deliver a 1.4 mile segregated cycle way, three major and 12 minor junction upgrades, six bus stop bypasses, five cycle parking spaces and public realm upgrades.',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://www.forbes.com/sites/carltonreid/2019/03/21/cyclesnake-style-bridge-planned-for-stockport-as-part-of-bee-network-proposals/#1557b885243d'
+                    }
+                ]
+            },
+            {
+                id: 'ordsall',
+                name: 'Ordsall Active Neighbourhood',
+                cost: '£2.8m',
+                type: 'Active Neighbourhood: Crossings/Modal Filters',
+                currentState: 0,
+                worksStart: 'TBC',
+                worksEnd: 'TBC',
+                details: 'The creation of an active neighbourhood in Ordsall where the movement of people is prioritised over the movement of motor traffic, this project will reduce car dependency and rat-running, as well as improving the experience of travelling to public transport hubs. It will deliver 10 junction upgrades, six new parallel crossings and 0.6 miles of light segregated cycle lanes, connecting the city centre with Ordsall riverside and Salford Quays.',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://www.forbes.com/sites/carltonreid/2019/03/21/cyclesnake-style-bridge-planned-for-stockport-as-part-of-bee-network-proposals/#1557b885243d'
+                    }
+                ]
             }
         ]
     },
@@ -349,6 +427,26 @@ const progress = [
                         href: 'https://www.wigan.gov.uk/Resident/Parking-Roads-Travel/Travel/Mayors-Challenge-Fund.aspx'
                     }
                 ]
+            },
+            {
+                id: 'leightathertontyldesley',
+                name: 'Leigh, Atherton and Tyldesley',
+                cost: '£14.6m',
+                type: '40km Superhighway + Quietway Network',
+                currentState: 0,
+                worksStart: '2020',
+                worksEnd: 'Mar 2022',
+                details: 'This project will improve the safety and accessibility of the town centres as well as links to business, retail and public transport hubs. It includes 24 new or upgraded crossings, 6.2 miles of segregated cycling lanes, 7.8 miles of shared road paths, 11.2 miles of shared use footway, 16 ‘parklets’ (small on-street mini- parks that typically have seating, planting and bike parking) as well as improvements to the street scape.',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://www.forbes.com/sites/carltonreid/2019/03/21/cyclesnake-style-bridge-planned-for-stockport-as-part-of-bee-network-proposals/#1557b885243d'
+                    },
+                    {
+                        title: 'Wigan Bee Network Page',
+                        href: 'https://www.wigan.gov.uk/Resident/Parking-Roads-Travel/Travel/Mayors-Challenge-Fund.aspx'
+                    }
+                ]
             }
         ]
     },
@@ -368,6 +466,22 @@ const progress = [
                     {
                         title: 'Announcement',
                         href: 'https://www.manchestereveningnews.co.uk/news/greater-manchester-news/cycling-walking-masterplan-routes-chorlton-14930463'
+                    }
+                ]
+            },
+            {
+                id: 'crownpoint',
+                name: 'Crown Point, Denton',
+                cost: '£2.5m',
+                type: '1.5km Superhighway + Junction',
+                currentState: 0,
+                worksStart: 'TBC',
+                worksEnd: 'TBC',
+                details: 'Enabling more people in Denton to travel on foot or by bike, this project will improve the experience at and close to Crown Point junction. It includes a 0.6 mile segregated cycle lane, a 300 metre hybrid lane, one signalised junction upgrade, two parallel crossings, bus stop bypasses and cycle parking.',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://www.forbes.com/sites/carltonreid/2019/03/21/cyclesnake-style-bridge-planned-for-stockport-as-part-of-bee-network-proposals/#1557b885243d'
                     }
                 ]
             }
@@ -479,6 +593,86 @@ const progress = [
                     {
                         title: 'Announcement',
                         href: 'https://tfgm.com/press-release/six-new-cycling-and-walking-projects'
+                    }
+                ]
+            },
+            {
+                id: 'a555',
+                name: 'A555 Airport Road Links',
+                cost: '£1.4m',
+                type: 'New shared path and Three crossings',
+                currentState: 0,
+                worksStart: 'TBC',
+                worksEnd: 'TBC',
+                details: 'This project increases the connectivity on foot or by bike of communities near the newly built A6 MARR corridor, including Heald Green, Stanley Green and Bramhall. This includes a 1.4 mile shared walking and cycling path and three new crossings for people walking and cycling.',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://www.forbes.com/sites/carltonreid/2019/03/21/cyclesnake-style-bridge-planned-for-stockport-as-part-of-bee-network-proposals/#1557b885243d'
+                    }
+                ]
+            },
+            {
+                id: 'hazelgrovebramhall',
+                name: 'A5143 Hazel Grove/Bramhall Link',
+                cost: '£4.1m',
+                type: '3.5km Superhighway + Junctions',
+                currentState: 0,
+                worksStart: 'TBC',
+                worksEnd: 'TBC',
+                details: 'Plugging an important gap in the network between Bramhall Park and Hazel Grove, this project will provide over two miles of new safe cycle route protected from traffic on the A5143 Jacksons Lane/Dean Lane including two signalised junction upgrades, seven minor junction upgrades, new crossings for people walking and cycling, bus stop-bypasses and cycle parking.',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://www.forbes.com/sites/carltonreid/2019/03/21/cyclesnake-style-bridge-planned-for-stockport-as-part-of-bee-network-proposals/#1557b885243d'
+                    }
+                ]
+            },
+            {
+                id: 'heatons',
+                name: 'The Heatons',
+                cost: '£2.2m',
+                type: '3.5km Quietway + Junctions',
+                currentState: 0,
+                worksStart: 'TBC',
+                worksEnd: 'TBC',
+                details: 'This project will create quiet routes that will connect the communities of Heaton Chapel, Heaton Moor and Heaton Mersey for journeys on foot and by bike. It will also link the Fallowfield Loop and the Trans Pennine Trail. This includes 1.9 miles of off-road paths, 12 minor junction upgrades, two signalised junction upgrades, new and upgraded crossings for people walking and cycling, modal filter points and cycle parking.',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://www.forbes.com/sites/carltonreid/2019/03/21/cyclesnake-style-bridge-planned-for-stockport-as-part-of-bee-network-proposals/#1557b885243d'
+                    }
+                ]
+            },
+            {
+                id: 'cheadlehulmeandbramhall',
+                name: 'Ladybrook Valley: Cheadle Hulme/Bramhall',
+                cost: '£0.8m',
+                type: '1.5km Traffic Free Path',
+                currentState: 0,
+                worksStart: 'TBC',
+                worksEnd: 'TBC',
+                details: 'This project will deliver a key missing link in the cycling and walking route in the Ladybrook Valley linking Bramhall, Cheadle Hulme and Cheadle. A 0.9 mile traffic-free cycling and walking path will be created as well as a ramp for access to Bramhall Park Road.',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://www.forbes.com/sites/carltonreid/2019/03/21/cyclesnake-style-bridge-planned-for-stockport-as-part-of-bee-network-proposals/#1557b885243d'
+                    }
+                ]
+            },
+            {
+                id: 'stockportinterchange',
+                name: 'Stockport Interchange',
+                cost: '£57m',
+                type: 'Bridge + Public Realm',
+                currentState: 0,
+                worksStart: 'TBC',
+                worksEnd: 'TBC',
+                details: 'This project will deliver a landmark new walking and cycling bridge spanning over 100m metres, providing a major new walking and cycling route linking the rail station, the new bus interchange, and Mersey Square.<br />The project will also create a traffic-free public square, new crossings for people walking and cycling and secure cycle storage.',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://www.forbes.com/sites/carltonreid/2019/03/21/cyclesnake-style-bridge-planned-for-stockport-as-part-of-bee-network-proposals/#1557b885243d'
                     }
                 ]
             }
