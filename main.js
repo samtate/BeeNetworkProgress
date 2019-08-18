@@ -79,7 +79,7 @@ const progress = [
                 currentState: 0,
                 worksStart: 'TBC',
                 worksEnd: 'TBC',
-                details: 'To further enhance the cycle facilities currently under construction on Talbot Road, this project will significantly upgrade the junctions at Chester Road, White City Way, and Great Stone Road, including dedicated crossings for people travelling on foot and by bike.',
+                details: 'To further enhance the cycle facilities recently finished on Talbot Road, this project will significantly upgrade the junctions at Chester Road, White City Way, and Great Stone Road, including dedicated crossings for people travelling on foot and by bike.',
                 links: [
                     {
                         title: 'Announcement',
@@ -149,6 +149,62 @@ const progress = [
                         href: 'https://www.salford.gov.uk/chapelstreeteast?utm_source=Twitter&utm_medium=social&utm_campaign=SocialSignIn'
                     }
                 ]
+            },
+            {
+                id: 'monton',
+                name: 'Monton Quiet Route',
+                cost: '£1.6m',
+                type: '3.2km Quietway + Crossings',
+                currentState: 0,
+                worksStart: 'TBC',
+                worksEnd: 'TBC',
+                details: 'This project will improve on foot and bike access to Monton, including six new parallel zebra crossings, a two mile cycling route on quiet streets and a new footway.',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://tfgm.com/press-release/six-new-cycling-and-walking-projects'
+                    }
+                ]
+            },
+            {
+                id: 'swintongreenway',
+                name: 'Swinton Greenway',
+                cost: '£4.6m',
+                type: '4km Greenway + Crossings',
+                currentState: 2,
+                worksStart: 'TBC',
+                worksEnd: 'TBC',
+                details: 'Swinton Greenway will create a direct, traffic-free route between Victoria Park in Swinton and Monton. It is proposed that the route will be four metres wide and include street lighting. It will also include a number of links to the wider community to ensure the route is as accessible as possible. The scheme will include the refurbishment of Black Harry subway and a new pedestrian and cycle crossing on Folly Lane',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://tfgm.com/press-release/six-new-cycling-and-walking-projects'
+                    },
+                    {
+                        title: 'Consultation Page & Plans',
+                        href: 'https://www.salford.gov.uk/parking-roads-and-travel/consultation-on-swinton-greenway/'
+                    }
+                ]
+            },
+            {
+                id: 'trinitywayspringfieldln',
+                name: 'Trinity Way/Springfield Lane Junction',
+                cost: '£0.9m',
+                type: 'Junction Upgrade',
+                currentState: 0,
+                worksStart: 'TBC',
+                worksEnd: 'TBC',
+                details: 'A major junction upgrade will be delivered improving signalised pedestrian crossings, and the potential for parallel cycle crossings.',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://tfgm.com/press-release/six-new-cycling-and-walking-projects'
+                    },
+                    {
+                        title: 'Salford Bee Network Page',
+                        href: 'https://www.salford.gov.uk/parking-roads-and-travel/cycling-and-walking/mayor-s-cycling-and-walking-challenge-fund/'
+                    }
+                ]
             }
         ]
     },
@@ -209,6 +265,30 @@ const progress = [
                     },
                     {
                         title: 'Consultation',
+                        href: 'https://www.wigan.gov.uk/Resident/Parking-Roads-Travel/Travel/Mayors-Challenge-Fund.aspx'
+                    },
+                ]
+            },
+            {
+                id: 'standishmineral',
+                name: 'Standish Mineral Line',
+                cost: '£0.7m',
+                type: '2.5km Greenway',
+                currentState: 3,
+                worksStart: 'Autumn 2019',
+                worksEnd: 'Spring 2020',
+                details: 'The project will deliver a 1.6 mile long traffic-free path for people travelling on foot or by bike serving new housing developments and providing new connections to link existing cycle schemes to future major segregated routes.',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://tfgm.com/press-release/six-new-cycling-and-walking-projects'
+                    },
+                    {
+                        title: 'Proposed Plan',
+                        href: 'https://www.wigan.gov.uk/Docs/PDF/Resident/Parking-Roads-Travel/Travel/Standish-Mineral-Line-Extension-plan.pdf'
+                    },
+                    {
+                        title: 'Wigan Bee Network Page',
                         href: 'https://www.wigan.gov.uk/Resident/Parking-Roads-Travel/Travel/Mayors-Challenge-Fund.aspx'
                     }
                 ]
@@ -326,6 +406,22 @@ const progress = [
                     {
                         title: 'Announcement',
                         href: 'https://www.manchestereveningnews.co.uk/news/greater-manchester-news/cycling-walking-masterplan-routes-chorlton-14930463'
+                    }
+                ]
+            },
+            {
+                id: 'hazelgrove',
+                name: 'Hazel Grove',
+                cost: '£0.9m',
+                type: 'Bridge and Surface Improvements',
+                currentState: 0,
+                worksStart: 'TBC',
+                worksEnd: 'TBC',
+                details: 'The project will improve on foot and bike access to Hazel Grove centre and area around the rail station.',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://tfgm.com/press-release/six-new-cycling-and-walking-projects'
                     }
                 ]
             }
