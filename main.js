@@ -15,6 +15,10 @@ const progress = [
                     {
                         title: 'Manchester City Council - Scheme Page',
                         href: 'https://secure.manchester.gov.uk/info/200024/consultations_and_surveys/7699/manchester_to_chorlton_cycling_and_walking_route_proposals'
+                    },
+                    {
+                        title: 'Visualisation',
+                        href: 'https://virtual-planit.com/portfolios/chorlton-cycleways/'
                     }
                 ]
             },
@@ -31,6 +35,10 @@ const progress = [
                     {
                         title: 'Annoucement',
                         href: 'https://secure.manchester.gov.uk/news/article/8146/manchester_welcomes_bee_network_funding_boost_for_new_cycling_and_walking_schemes'
+                    },
+                    {
+                        title: 'Visualisation',
+                        href: 'https://tfgm.com/made-to-move/visualise-the-future'
                     }
                 ]
             },
@@ -47,6 +55,10 @@ const progress = [
                     {
                         title: 'Annoucement',
                         href: 'https://secure.manchester.gov.uk/news/article/8190/manchester_welcomes_proposed_4m_bee_network_boost_for_cycling_and_walking_in_the_city_centre'
+                    },
+                    {
+                        title: 'Visualisation',
+                        href: 'https://tfgm.com/made-to-move/visualise-the-future'
                     }
                 ]
             },
@@ -72,7 +84,7 @@ const progress = [
             },
             {
                 id: 'ancoats',
-                name: 'Ancoats Cycleway',
+                name: 'Northern and Eastern Gateway',
                 cost: '£13.2m',
                 type: '2.1km Quietway + Bridges',
                 currentState: 0,
@@ -120,6 +132,42 @@ const progress = [
                     {
                         title: 'Announcement',
                         href: 'https://www.forbes.com/sites/carltonreid/2019/03/21/cyclesnake-style-bridge-planned-for-stockport-as-part-of-bee-network-proposals/#1557b885243d'
+                    }
+                ]
+            },
+            {
+                id: 'salemoor',
+                name: 'Sale Scheme',
+                cost: '£10.4m',
+                type: 'Public Realm & Cycle Routes',
+                currentState: 0,
+                worksStart: 'TBC',
+                worksEnd: 'TBC',
+                details: 'A safe, high-quality and attractive walking and cycling route will be delivered, linking Sale town centre, the district of Sale Moor and Sale Water Park, connecting with Chorlton, Manchester. ',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://tfgm.com/press-release/bee-network-tranche-five-announced'
+                    },
+                    {
+                        title: 'Visualisation',
+                        href: 'https://tfgm.com/made-to-move/visualise-the-future'
+                    }
+                ]
+            },
+            {
+                id: 'urmston',
+                name: 'Urmston Active Neighbourhood',
+                cost: '£11.5m',
+                type: 'Cycleways, Crossings, Modal Filters',
+                currentState: 0,
+                worksStart: 'TBC',
+                worksEnd: 'TBC',
+                details: 'This major active neighbourhood scheme will significantly improve the walking and cycling environment in the Urmston area. Interventions will be community and stakeholder driven and it is expected that they will include segregated cycle routes, new and upgraded crossings, improved signage, parklets, school street treatments and collision reduction measures.',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://tfgm.com/press-release/bee-network-tranche-five-announced'
                     }
                 ]
             }
@@ -278,7 +326,11 @@ const progress = [
                     {
                         title: 'Announcement',
                         href: 'https://www.forbes.com/sites/carltonreid/2019/03/21/cyclesnake-style-bridge-planned-for-stockport-as-part-of-bee-network-proposals/#1557b885243d'
-                    }
+                    },
+                    {
+                        title: 'Salford Bee Network Page',
+                        href: 'https://www.salford.gov.uk/parking-roads-and-travel/cycling-and-walking/mayor-s-cycling-and-walking-challenge-fund/'
+                    },
                 ]
             },
             {
@@ -294,7 +346,11 @@ const progress = [
                     {
                         title: 'Announcement',
                         href: 'https://www.forbes.com/sites/carltonreid/2019/03/21/cyclesnake-style-bridge-planned-for-stockport-as-part-of-bee-network-proposals/#1557b885243d'
-                    }
+                    },
+                    {
+                        title: 'Salford Bee Network Page',
+                        href: 'https://www.salford.gov.uk/parking-roads-and-travel/cycling-and-walking/mayor-s-cycling-and-walking-challenge-fund/'
+                    },
                 ]
             },
             {
@@ -310,7 +366,51 @@ const progress = [
                     {
                         title: 'Announcement',
                         href: 'https://www.forbes.com/sites/carltonreid/2019/03/21/cyclesnake-style-bridge-planned-for-stockport-as-part-of-bee-network-proposals/#1557b885243d'
-                    }
+                    },
+                    {
+                        title: 'Salford Bee Network Page',
+                        href: 'https://www.salford.gov.uk/parking-roads-and-travel/cycling-and-walking/mayor-s-cycling-and-walking-challenge-fund/'
+                    },
+                ]
+            },
+            {
+                id: 'salfordcitycentre',
+                name: 'Salford City Centre',
+                cost: '£28.2m',
+                type: 'Cycling and Walking Network + Crossings',
+                currentState: 0,
+                worksStart: 'TBC',
+                worksEnd: 'TBC',
+                details: 'This scheme will remove the barriers to cycling and walking in Salford’s city centre, delivering a complete, high-quality walking and cycling network across the entire area, linked to public transport. ',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://tfgm.com/press-release/bee-network-tranche-five-announced'
+                    },
+                    {
+                        title: 'Salford Bee Network Page',
+                        href: 'https://www.salford.gov.uk/parking-roads-and-travel/cycling-and-walking/mayor-s-cycling-and-walking-challenge-fund/'
+                    },
+                ]
+            },
+            {
+                id: 'rhslinks',
+                name: 'Salford RHS Links',
+                cost: '£2m',
+                type: 'Cycling and Walking Network + Crossings',
+                currentState: 0,
+                worksStart: 'TBC',
+                worksEnd: 'TBC',
+                details: 'This scheme will significantly improve the on foot and by bike experience in the area, improving access to the new RHS Bridgewater Garden, Parr Fold Park, Worsley College and Walkden Train Station.',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://tfgm.com/press-release/bee-network-tranche-five-announced'
+                    },
+                    {
+                        title: 'Salford Bee Network Page',
+                        href: 'https://www.salford.gov.uk/parking-roads-and-travel/cycling-and-walking/mayor-s-cycling-and-walking-challenge-fund/'
+                    },
                 ]
             }
         ]
@@ -333,8 +433,23 @@ const progress = [
                         href: 'https://www.manchestereveningnews.co.uk/news/greater-manchester-news/cycling-walking-masterplan-routes-chorlton-14930463'
                     }
                 ]
+            },
+            {
+                id: 'boltontowncentre',
+                name: 'Bolton Town Centre',
+                cost: '£4.1m',
+                type: 'Crossings, Cycle Tracks, Subways',
+                currentState: 0,
+                worksStart: 'TBC',
+                worksEnd: 'TBC',
+                details: 'This project will improve the on foot and by bike experience across a large part of the town centre, including creating seven new crossings, upgrading two junctions, creating two-way cycle tracks on one-way streets, upgrading two subways and delivering more cycle parking.',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://tfgm.com/press-release/bee-network-tranche-five-announced'
+                    }
+                ]
             }
-            
         ]
     },
     {
@@ -445,6 +560,34 @@ const progress = [
                     {
                         title: 'Wigan Bee Network Page',
                         href: 'https://www.wigan.gov.uk/Resident/Parking-Roads-Travel/Travel/Mayors-Challenge-Fund.aspx'
+                    },
+                    {
+                        title: 'Visualisation',
+                        href: 'https://tfgm.com/made-to-move/visualise-the-future'
+                    }
+                ]
+            },
+            {
+                id: 'standishtoashton',
+                name: 'Standish to Ashton',
+                cost: '£32.2m',
+                type: '40km: Offroad & Cycleways + Junctions',
+                currentState: 0,
+                worksStart: 'TBC',
+                worksEnd: 'TBC',
+                details: 'This scheme will deliver high quality, attractive alternatives to the car along Wigan’s A49 corridor, including segregated cycle lanes and improved crossings. The project will deliver 13 miles of traffic free routes, including almost six miles of resurfaced off-road routes, four miles of refurbished canal towpath, three miles of completely new path on a disused railway line, including Whelley viaduct. Three sets of steps will be replaced with ramps to open up the ‘3 bridges’ link over the canal, river and railway. Around 13 protected junctions on A-roads, three miles of segregated cycle lanes and 13 miles of routes on quiet roads will also be delivered as well as neighbourhood cycle parking and parklets.',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://tfgm.com/press-release/bee-network-tranche-five-announced'
+                    },
+                    {
+                        title: 'Wigan Bee Network Page',
+                        href: 'https://www.wigan.gov.uk/Resident/Parking-Roads-Travel/Travel/Mayors-Challenge-Fund.aspx'
+                    },
+                    {
+                        title: 'Visualisation',
+                        href: 'https://tfgm.com/made-to-move/visualise-the-future'
                     }
                 ]
             }
@@ -482,6 +625,58 @@ const progress = [
                     {
                         title: 'Announcement',
                         href: 'https://www.forbes.com/sites/carltonreid/2019/03/21/cyclesnake-style-bridge-planned-for-stockport-as-part-of-bee-network-proposals/#1557b885243d'
+                    }
+                ]
+            },
+            {
+                id: 'ashtonbridge',
+                name: 'Ashton West Retail Centre Bridge',
+                cost: '£1.2m',
+                type: 'Cycling and Walking Bridge',
+                currentState: 0,
+                worksStart: 'TBC',
+                worksEnd: 'TBC',
+                details: 'A new 60 metre cycling and walking bridge will be delivered by this scheme linking existing facilities to the north and south of Manchester Road and Ashton Metrolink. Ramped access will be provided to a wide shared bridge area suitable for all users. ',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://tfgm.com/press-release/bee-network-tranche-five-announced'
+                    }
+                ]
+            },
+            {
+                id: 'ashtonstreetscape',
+                name: 'Ashton Streetscape',
+                cost: '£6.1m',
+                type: 'Public Realm & Walking/Cycling Routes',
+                currentState: 0,
+                worksStart: 'TBC',
+                worksEnd: 'TBC',
+                details: 'High quality walking and cycling routes will be delivered across and along the A6043 Wellington Road / Albion Way corridor, forming part of Phase 3 of the Vision Tameside public realm works.',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://tfgm.com/press-release/bee-network-tranche-five-announced'
+                    }
+                ]
+            },
+            {
+                id: 'ashtonsouth',
+                name: 'Ashton South',
+                cost: '£1.2m',
+                type: 'Public Realm & Walking/Cycling Routes',
+                currentState: 0,
+                worksStart: 'TBC',
+                worksEnd: 'TBC',
+                details: 'This scheme will establish cycle routes into and through the town centre and enhance the environment for pedestrians. The scheme will consider the use of contraflow cycle lanes and potentially reversing sections of one-way streets to deter motor vehicles rat running. The scheme will also reduce speed limits, remove unnecessary street furniture and provide additional cycle parking within the town centre.',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://tfgm.com/press-release/bee-network-tranche-five-announced'
+                    },
+                    {
+                        title: 'Visualisation',
+                        href: 'https://tfgm.com/made-to-move/visualise-the-future'
                     }
                 ]
             }
@@ -673,6 +868,46 @@ const progress = [
                     {
                         title: 'Announcement',
                         href: 'https://www.forbes.com/sites/carltonreid/2019/03/21/cyclesnake-style-bridge-planned-for-stockport-as-part-of-bee-network-proposals/#1557b885243d'
+                    },
+                    {
+                        title: 'Visualisation',
+                        href: 'https://tfgm.com/made-to-move/visualise-the-future'
+                    }
+                ]
+            },
+            {
+                id: 'heatonnorrisbridge',
+                name: 'Heaton Norris M60 Bridge',
+                cost: '£6.8m',
+                type: 'Walking & Cycling Bridge over M60',
+                currentState: 0,
+                worksStart: 'TBC',
+                worksEnd: 'TBC',
+                details: 'A new cycling and walking bridge will replace the existing narrow, unattractive pedestrian bridge over the M60 on a key route linking Heaton Norris with Stockport town centre. This scheme also includes a new path within Heaton Norris park, a signalised junction upgrade and one parallel crossing.',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://tfgm.com/press-release/bee-network-tranche-five-announced'
+                    },
+                    {
+                        title: 'Visualisation',
+                        href: 'https://tfgm.com/made-to-move/visualise-the-future'
+                    }
+                ]
+            },
+            {
+                id: 'hempshawlane',
+                name: 'Hempshaw Lane',
+                cost: '£1.2m',
+                type: 'Quietway + Crossings and Links',
+                currentState: 0,
+                worksStart: 'TBC',
+                worksEnd: 'TBC',
+                details: 'This scheme will provide new crossings as well as delivering a new walking and cycling route through St. Thomas’ Recreation Ground.',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://tfgm.com/press-release/bee-network-tranche-five-announced'
                     }
                 ]
             }
@@ -710,6 +945,22 @@ const progress = [
                     {
                         title: 'Announcement',
                         href: 'https://www.manchestereveningnews.co.uk/news/greater-manchester-news/cycling-walking-masterplan-routes-chorlton-14930463'
+                    }
+                ]
+            },
+            {
+                id: 'fishpool',
+                name: 'Fishpool',
+                cost: '£3.6m',
+                type: '1.5km Quietway + Crossings',
+                currentState: 0,
+                worksStart: 'TBC',
+                worksEnd: 'TBC',
+                details: 'This project will improve the on foot and by bike experience across a large part of the town centre, including creating seven new crossings, upgrading two junctions, creating two-way cycle tracks on one-way streets, upgrading two subways and delivering more cycle parking.',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://tfgm.com/press-release/bee-network-tranche-five-announced'
                     }
                 ]
             }
