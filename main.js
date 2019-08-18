@@ -205,6 +205,35 @@ const progress = [
                         href: 'https://www.salford.gov.uk/parking-roads-and-travel/cycling-and-walking/mayor-s-cycling-and-walking-challenge-fund/'
                     }
                 ]
+            },
+            {
+                id: 'traffordroad',
+                name: 'Trafford Road',
+                cost: '£4.8m',
+                type: 'New Toucan Crossings',
+                currentState: 1,
+                worksStart: 'Mid 2020',
+                worksEnd: 'Early 2022',
+                details: 'This scheme features a mile of new footway level cycle track, a parallel walking route, six upgraded junctions where cyclists are fully protected from motor traffic and eight bus stop bypasses for bikes. ',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://www.manchestereveningnews.co.uk/news/greater-manchester-news/salford-cycling-chris-boardman-beelines-15515035'
+                    },
+                    {
+                        title: 'Engagement Page',
+                        href: 'https://www.salford.gov.uk/traffordroad'
+                    },
+                    {
+                        title: 'Salford Bee Network Page',
+                        href: 'https://www.salford.gov.uk/parking-roads-and-travel/cycling-and-walking/mayor-s-cycling-and-walking-challenge-fund/'
+                    },
+                    {
+                        title: 'Current Plan',
+                        href: 'https://sccdemocracy.salford.gov.uk/documents/s17745/05b%20-%20Appendix%20A%20-%20Trafford%20Road%20Corridor%20Plan.pdf'
+                    },
+                    
+                ]
             }
         ]
     },
@@ -241,11 +270,19 @@ const progress = [
                 currentState: 5,
                 worksStart: 'May 2019',
                 worksEnd: 'Aug 2019',
-                details: 'The £212,000 project will deliver the much-needed one mile stretch of surface improvements, as well as better access and signage, plugging a vital gap in the Bridgewater Way. The works will allow people to cycle on the canal path all the way from Wigan Pier, through Leigh and across the Salford boundary to Monton and Patricroft.',
+                details: 'The first Mayors Challenge Fund (MCF) scheme is now complete with improvements to the canal towpath in Astley. The works included a stretch of towpath from Higher Green Lane to the Salford border, with a new multi-user surface, as well as improved drainage, access points and signage along the canal.',
                 links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://www.manchestereveningnews.co.uk/news/greater-manchester-news/salford-cycling-chris-boardman-beelines-15515035'
+                    },
                     {
                         title: 'Completion',
                         href: 'https://twitter.com/martinkeyBC/status/1156535893114654720'
+                    },
+                    {
+                        title: 'Wigan Bee Network Page',
+                        href: 'https://www.wigan.gov.uk/Resident/Parking-Roads-Travel/Travel/Mayors-Challenge-Fund.aspx'
                     }
                 ]
             },
@@ -286,6 +323,26 @@ const progress = [
                     {
                         title: 'Proposed Plan',
                         href: 'https://www.wigan.gov.uk/Docs/PDF/Resident/Parking-Roads-Travel/Travel/Standish-Mineral-Line-Extension-plan.pdf'
+                    },
+                    {
+                        title: 'Wigan Bee Network Page',
+                        href: 'https://www.wigan.gov.uk/Resident/Parking-Roads-Travel/Travel/Mayors-Challenge-Fund.aspx'
+                    }
+                ]
+            },
+            {
+                id: 'gidlowswinley',
+                name: 'Gidlow/Swinley Crossings',
+                cost: '£0.7m',
+                type: '1.6km Superhighway + Junctions',
+                currentState: 1,
+                worksStart: 'Late 2019',
+                worksEnd: 'Mid 2020',
+                details: 'The scheme will provide safe road crossing facilities including five Toucan Crossing upgrades on existing key junctions along Gidlow Lane, Springfield Road, Kenyon Road/Walkden Ave, Park Road, and Frog Lane. In addition, there will be implied crossing points to improve the safety at side-road junctions.',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://www.manchestereveningnews.co.uk/news/greater-manchester-news/salford-cycling-chris-boardman-beelines-15515035'
                     },
                     {
                         title: 'Wigan Bee Network Page',
