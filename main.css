@@ -260,3 +260,15 @@ select {
     list-style-type: none;
     padding: 0;
 }
+footer {
+    font-family: 'Raleway';
+    font-weight: 100;
+    color: #404040;
+    width: 960px;
+    height: 60px;
+    margin: 0 auto 0 auto;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+}

@@ -528,7 +528,7 @@ const progress = [
                 name: 'Gidlow/Swinley Crossings',
                 cost: '£0.7m',
                 type: '1.6km Superhighway + Junctions',
-                currentState: 1,
+                currentState: 3,
                 worksStart: 'Late 2019',
                 worksEnd: 'Mid 2020',
                 details: 'The scheme will provide safe road crossing facilities including five Toucan Crossing upgrades on existing key junctions along Gidlow Lane, Springfield Road, Kenyon Road/Walkden Ave, Park Road, and Frog Lane. In addition, there will be implied crossing points to improve the safety at side-road junctions.',
