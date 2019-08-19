@@ -1,0 +1,80 @@
+body {
+    width: 100%;
+}
+header {
+    height: 50px;
+}
+#bee {
+    width: 45px;
+    height: 45px;
+}
+.header-container {
+    min-width: 300px;
+    height: 50px;
+    width: 95%
+}
+#logotype {
+    font-size: 15px;
+    width: 150px;
+}
+#borough-select {
+    width: 150px;
+    height: 40px;
+    background-color: rgba(0,0,0,0);
+    border: 1px #404040 solid;
+    border-radius: 5px;
+    font-size: 15px;
+    text-indent: 5px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+}
+#container {
+    width: 100%;
+}
+footer {
+    width: 100%;
+}
+#content {
+    padding-top: 50px;
+}
+.boroughheader {
+    height: 30vh;
+}
+.boroughheader img {
+    height: 30vh;
+}
+.schemebox {
+    height: 200px;
+}
+.schemesummary {
+    height: 200px;
+    flex-wrap: wrap;
+}
+.schemesummary h2 {
+    order: 1;
+    width: 30%;
+    margin: 0;
+}
+.box {
+    order: 4;
+}
+.statebox {
+    order: 2;
+    width: 70%;
+    margin: 0;
+}
+.stateheader {
+    width: 90%
+}
+.statecontent {
+    width: 90%
+}
+.statsbox {
+    order: 3;
+}
+.schemesummary button {
+    order: 5;
+}
+.progressbar {
+    width: 90%;
+}
