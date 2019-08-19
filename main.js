@@ -1038,6 +1038,7 @@ function renderBorough(i) {
             </div>
     `
 
+    document.querySelector('.loader').style.display = 'none';
     document.getElementById('content').innerHTML = contentMarkup;
     boroughSelect.value = i;
 }
@@ -1122,8 +1123,15 @@ function getBorough(position) {
 
 function getLocation() {
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(getBorough, renderBorough(0));
+        navigator.geolocation.getCurrentPosition(getBorough, error);
       }
+    else {
+        error();
+    }
+
+    function error() {
+        renderBorough(0);
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
