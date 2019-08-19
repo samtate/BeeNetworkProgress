@@ -159,7 +159,7 @@ const progress = [
                 type: 'Junction Upgrade',
                 currentState: 4,
                 worksStart: 'Sept 2019',
-                worksEnd: 'TBC',
+                worksEnd: 'May 2020',
                 details: 'This project involves a full upgrade of the junction of the Mancunian Way with Princess Road.  The existing subways will be removed and protected cycle tracks will be created, as well as pedestrian paths and a signalised crossing.',
                 links: [
                     {
@@ -974,6 +974,7 @@ const progress = [
 ]
 
 function renderBorough(i) {
+    const boroughSelect = document.getElementById('borough-select');
     const borough = progress[i];
     let contentMarkup = `
             <div class="boroughheader">
@@ -1012,7 +1013,9 @@ function renderBorough(i) {
                                 <span class="boxheader worksheader">Works ${scheme.currentState === 5? `Ended`:`End`}:</span>
                                 <span class="boxcontent workscontent">${scheme.worksEnd}</span>
                             </div>
-                            <button class="moreinfo" id="btn-${scheme.id}" onclick="toggleBtn('${scheme.id}')"> </button>
+                            <div class="moreinfocontainer">
+                                <button class="moreinfo" id="btn-${scheme.id}" onclick="toggleBtn('${scheme.id}')"> </button>
+                            </div>
                         </div>
                         <div class="infobox" id="info-${scheme.id}">
                             <div class="infodetails">
@@ -1036,6 +1039,17 @@ function renderBorough(i) {
     `
 
     document.getElementById('content').innerHTML = contentMarkup;
+    boroughSelect.value = i;
+}
+
+function countCash(borough) {
+    let total = 0
+    borough.schemes.forEach(scheme => {
+        cost = scheme.cost.match(/\d+\.?\d*/)[0];
+        console.log(cost)
+        total += Number(cost);
+    })
+    return total.toFixed(1);
 }
 
 function getStateText(currentState, consultationLink) {
@@ -1083,7 +1097,7 @@ function toggleBtn(id) {
 function getBorough(position) {
     const lon = position.coords.longitude;
     const lat = position.coords.latitude;
-    const boroughSelect = document.getElementById('borough-select');
+    
     let boroughs = ['Bolton','Bury','Manchester','Oldham','Rochdale','Salford','Stockport','Tameside','Trafford','Wigan']
     let borough;
 
@@ -1098,7 +1112,6 @@ function getBorough(position) {
             const boroughIndex = boroughs.indexOf(borough);
             if (boroughIndex !== -1) {
                 renderBorough(boroughIndex);
-                boroughSelect.value = boroughIndex
             } else {
                 renderBorough(0);
             }
@@ -1109,7 +1122,7 @@ function getBorough(position) {
 
 function getLocation() {
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(getBorough);
+        navigator.geolocation.getCurrentPosition(getBorough, renderBorough(0));
       }
 }
 

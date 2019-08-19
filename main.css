@@ -57,6 +57,7 @@ select {
 }
 #content {
     padding-top: 100px;
+    padding-bottom: 80px;
 }
 #container {
     width: 960px;
@@ -64,7 +65,8 @@ select {
 }
 .boroughheader {
     width: 100%;
-    height: 350px;
+    max-height: 250px;
+    height: 35vh;
     position: relative;
     box-shadow: 3px 0px 5px 1px rgba(0,0,0,0.75);
 }
@@ -86,17 +88,18 @@ select {
     top: 0;
     object-fit: cover;
     width: 100%;
-    height: 350px;
+    max-height: 250px;
+    height: 35vh;
 }
 .schemebox {
     border-bottom: 1px #38618C solid;
     color: #38618C;
     transition: all 0.3s ease;
-    height: 100px;
+    max-height: 100px;
     overflow: hidden;
 }
 .schemebox.active {
-    height: 318px;
+    max-height: 600px;
 }
 .schemebox:first-of-type {
     margin-top: 10px;
@@ -209,6 +212,8 @@ select {
 }
 .progressbar li.active:before {
     border-color: #55b776;
+    background-color: #55b776;
+    color: #fff;
 }
 .progressbar li.active + li:after {
     background-color: #55b776;
@@ -239,7 +244,7 @@ select {
 }
 .infobox {
     display: flex;
-    height: 200px;
+    max-height: 200px;
     padding: 0 60px;
     font-family: 'Raleway';
     opacity: 0;
@@ -250,11 +255,10 @@ select {
 }
 .infodetails {
     width: 70%;
-    padding-right: 30px;
+    padding-right: 40px;
 }
 .infolinks {
     width: 30%;
-    padding-left: 30px;
 }
 .infolinks ul {
     list-style-type: none;
@@ -264,11 +268,23 @@ footer {
     font-family: 'Raleway';
     font-weight: 100;
     color: #404040;
-    width: 960px;
+    background-color: #ffe033;
+    box-shadow: 3px 0px 5px 1px rgba(0,0,0,0.75);
+    width: 100%;
     height: 60px;
-    margin: 0 auto 0 auto;
     display: flex;
     flex-direction: column; 
     align-items: center;
     justify-content: center;
+    position: fixed;
+    bottom: 0;
+    z-index: 5;
+}
+.footerlinks {
+    padding: 5px;
+}
+.footerlinks a {
+    text-decoration: none;
+    color: #404040;
+    margin: 0 10px;
 }
