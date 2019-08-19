@@ -33,7 +33,7 @@ header {
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
     font-size: 30px;
-    text-indent: 15px;
+    margin-left: 15px;
 }
 select {
     -webkit-appearance: none;
@@ -76,8 +76,8 @@ select {
     color: white;
     position: absolute;
     top: 50%;
-    left: 20%;
-    transform: translate(-20%,-50%);
+    left: 50%;
+    transform: translate(-50%,-50%);
     margin: 0;
     text-shadow: 3px 3px 3px #000000;
 }

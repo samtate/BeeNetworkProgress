@@ -1080,41 +1080,6 @@ function toggleBtn(id) {
     }
 }
 
-function getBoroughNumber(borough) {
-    switch (borough) {
-        case "Bolton":
-            return 0
-            break;
-        case "Bury":
-            return 1
-            break;
-        case "Manchester":
-            return 2
-            break;
-        case "Oldham":
-            return 3
-            break;
-        case "Rochdale":
-            return 4
-            break;
-        case "Salford":
-            return 5
-            break;
-        case "Stockport":
-            return 6
-            break;
-        case "Tameside":
-            return 7
-            break;
-        case "Trafford":
-            return 8
-            break;
-        case "Wigan":
-            return 9
-            break;
-    }
-}
-
 function getBorough(position) {
     const lon = position.coords.longitude;
     const lat = position.coords.latitude;
@@ -1134,6 +1099,8 @@ function getBorough(position) {
             if (boroughIndex !== -1) {
                 renderBorough(boroughIndex);
                 boroughSelect.value = boroughIndex
+            } else {
+                renderBorough(0);
             }
         });
 
@@ -1150,9 +1117,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const boroughSelect = document.getElementById('borough-select');
     boroughSelect.addEventListener('change', (e) => renderBorough(e.target.value))
     
-    renderBorough(0);
+    getLocation()
 
-    getLocation() 
-
-    
 })
