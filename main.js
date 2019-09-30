@@ -10,11 +10,15 @@ const progress = [
                 currentState: 0,
                 worksStart: 'TBC',
                 worksEnd: 'TBC',
-                details: 'A high quality walking and cycling route to the town centre, running parallel to the much busier Chorley Old Road. The project includes signed quiet routes, improved crossings and routes through parks and public spaces',
+                details: 'A high quality walking and cycling route to the town centre, running parallel to the much busier Chorley Old Road. The project includes signed quiet routes, improved crossings and routes through parks and public spaces.<br />Detailed designs available and will shortly be going into public consultation.',
                 links: [
                     {
                         title: 'Announcement',
                         href: 'https://www.manchestereveningnews.co.uk/news/greater-manchester-news/cycling-walking-masterplan-routes-chorlton-14930463'
+                    },
+                    {
+                        title: 'Current Developments',
+                        href: 'https://drive.google.com/file/d/1T3IuV4XR6RojfwwVXStpkkW5c4CfUwva/'
                     }
                 ]
             },
@@ -97,13 +101,13 @@ const progress = [
                 name: 'Chorlton Cycleway',
                 cost: '£13.4m',
                 type: '5km Superhighway',
-                currentState: 2,
-                worksStart: 'Late 2019',
+                currentState: 3,
+                worksStart: 'October 2019',
                 worksEnd: 'TBC',
                 details: 'The 5km route will run along Barlow Moor Road, Manchester Road, Upper Chorlton Road and Chorlton Road, linking with existing routes and continuing to the city centre. Chorlton will be one of the first routes to be built and will provide a high-quality, segregated link between Chorlton and Manchester city centre, making it safer, more attractive and easier to get around.',
                 links: [
                     {
-                        title: 'Manchester City Council - Scheme Page',
+                        title: 'Consultation Report and Original Plans',
                         href: 'https://secure.manchester.gov.uk/info/200024/consultations_and_surveys/7699/manchester_to_chorlton_cycling_and_walking_route_proposals'
                     },
                     {
@@ -857,7 +861,7 @@ const progress = [
                 name: 'Victoria Street/Warrington Road Junction',
                 cost: '£0.7m',
                 type: 'Junction Upgrade',
-                currentState: 1,
+                currentState: 3,
                 worksStart: '2020',
                 worksEnd: '2020',
                 details: 'Extends the Saddle Junction cycle facility, which is under construction, to the southwest, adding more cycling and walking infrastructure connecting with Alexandra Park.',
@@ -869,6 +873,10 @@ const progress = [
                     {
                         title: 'Consultation',
                         href: 'https://www.wigan.gov.uk/Resident/Parking-Roads-Travel/Travel/Mayors-Challenge-Fund.aspx'
+                    },
+                    {
+                        title: 'Consultation Report',
+                        href: 'https://www.wigan.gov.uk/Docs/PDF/Resident/Parking-Roads-Travel/Travel/Victoria-Street-You-Said-We-Will.pdf'
                     },
                 ]
             },
@@ -966,11 +974,6 @@ const progress = [
             }
         ]
     },
-    
-    
-    
-    
-    
 ]
 
 function renderBorough(i) {
@@ -978,7 +981,7 @@ function renderBorough(i) {
     const borough = progress[i];
     let contentMarkup = `
             <div class="boroughheader">
-                <img src="img/headers/${borough.title}.jpg" />
+                <img src="img/headers/${borough.title}.png" />
                 <h1>${borough.title}</h1>
             </div>
             <div id="container">
@@ -996,11 +999,11 @@ function renderBorough(i) {
                             </div>
                             <div class="box statebox">
                                 <span class="boxheader stateheader">Current State:</span>
-                                <span class="boxcontent statecontent">${getStateText(scheme.currentState, scheme.currentState===1 ? scheme.links[1].href : false)}</span>
+                                <span class="boxcontent statecontent">${scheme.currentState===1 ? `<a href="${scheme.links[1].href}">${getStateText(scheme.currentState)}</a>` : `${getStateText(scheme.currentState)}`}</span>
                                 <div class="progressbarcontainer">
                                     <ul class="progressbar">
                                         ${[...Array(6).keys()].map((i)=>`
-                                            <li class="${scheme.currentState === i?'active':''}"></li>
+                                            <li class="${scheme.currentState === i?'active':''}"><div tooltip="${getStateText(i)}"></div></li>
                                         `).join('')}
                                     </ul>
                                 </div>
@@ -1041,6 +1044,7 @@ function renderBorough(i) {
     document.querySelector('.loader').style.display = 'none';
     document.getElementById('content').innerHTML = contentMarkup;
     boroughSelect.value = i;
+    registerTooltips();
 }
 
 function countCash(borough) {
@@ -1053,13 +1057,13 @@ function countCash(borough) {
     return total.toFixed(1);
 }
 
-function getStateText(currentState, consultationLink) {
+function getStateText(currentState) {
     switch (currentState) {
         case 0:
             return 'Design, Awaiting Consultation'
             break;
         case 1:
-            return `<a href="${consultationLink}">Consultation</a>`
+            return `Consultation`
             break;
         case 2:
             return 'Awaiting Consultation Report'
@@ -1111,11 +1115,7 @@ function getBorough(position) {
             borough = borough.replace(/['"]+/g, '');
 
             const boroughIndex = boroughs.indexOf(borough);
-            if (boroughIndex !== -1) {
-                renderBorough(boroughIndex);
-            } else {
-                renderBorough(0);
-            }
+            renderBorough((boroughIndex !== -1) ? boroughIndex : 0);
         });
 
     
@@ -1134,10 +1134,21 @@ function getLocation() {
     }
 }
 
+function registerTooltips() {
+    const tooltips = document.querySelectorAll('[tooltip]');
+    console.log(tooltips);
+    tooltips.forEach(tooltip => {
+        tooltip.addEventListener('mouseover', (e) => {
+        return lol    
+        })
+    })
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     const boroughSelect = document.getElementById('borough-select');
     boroughSelect.addEventListener('change', (e) => renderBorough(e.target.value))
     
     getLocation()
 
+   
 })
