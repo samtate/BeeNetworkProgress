@@ -42,6 +42,9 @@ footer {
 .boroughheader img {
     height: 30vh;
 }
+.boroughheader p {
+    font-size: 20px;
+}
 .schemebox {
     max-height: 300px;
 }

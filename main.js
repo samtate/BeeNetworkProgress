@@ -5,7 +5,7 @@ const progress = [
             {
                 id: 'b6226',
                 name: 'B6226 Parallel Quiet Route',
-                cost: '£1.5m',
+                cost: '£1.6m',
                 type: '4.5km Quietway',
                 currentState: 0,
                 worksStart: 'TBC',
@@ -99,7 +99,7 @@ const progress = [
             {
                 id: 'chorlton',
                 name: 'Chorlton Cycleway',
-                cost: '£13.4m',
+                cost: '£13.8m',
                 type: '5km Superhighway',
                 currentState: 3,
                 worksStart: 'October 2019',
@@ -113,6 +113,10 @@ const progress = [
                     {
                         title: 'Visualisation',
                         href: 'https://virtual-planit.com/portfolios/chorlton-cycleways/'
+                    },
+                    {
+                        title: 'Construction Details & Engineering Plans',
+                        href: 'https://secure.manchester.gov.uk/info/500352/roadworks_and_closures/7840/manchester_to_chorlton_cycle_way'
                     }
                 ]
             },
@@ -159,7 +163,7 @@ const progress = [
             {
                 id: 'princessrd',
                 name: 'Princess Road Roundabout',
-                cost: '£2.9m',
+                cost: '£10.6m',
                 type: 'Junction Upgrade',
                 currentState: 4,
                 worksStart: 'Sept 2019',
@@ -258,7 +262,7 @@ const progress = [
             {
                 id: 'swintonwalkdenjunctions',
                 name: 'Junctions in Swinton and Walkden',
-                cost: '£1.1m',
+                cost: '£5.1m',
                 type: 'Two Upgraded Junctions',
                 currentState: 0,
                 worksStart: 'TBC',
@@ -274,7 +278,7 @@ const progress = [
             {
                 id: 'broadstfrederickrd',
                 name: 'Broad St/Frederick Rd Junction',
-                cost: '£0.6m',
+                cost: '£3.3m',
                 type: 'Upgraded Junction',
                 currentState: 0,
                 worksStart: 'TBC',
@@ -290,7 +294,7 @@ const progress = [
             {
                 id: 'chapelste',
                 name: 'Chapel Street East',
-                cost: '£4.3m',
+                cost: '£5m',
                 type: '0.3km Superhighway and Public Realm',
                 currentState: 2,
                 worksStart: 'Late 2019',
@@ -366,7 +370,7 @@ const progress = [
             {
                 id: 'traffordroad',
                 name: 'Trafford Road',
-                cost: '£4.8m',
+                cost: '£19.8m',
                 type: 'New Toucan Crossings',
                 currentState: 1,
                 worksStart: 'Mid 2020',
@@ -498,27 +502,11 @@ const progress = [
         title: 'stockport',
         schemes: [
             {
-                id: 'gilbentrd',
-                name: 'Gilbent Road Crossing',
-                cost: '£0.11m',
-                type: 'Upgraded Crossing',
-                currentState: 0,
-                worksStart: 'TBC',
-                worksEnd: 'TBC',
-                details: 'An enhanced crossing for people travelling by bike and on foot in Cheadle Hulme. It will better connect residential areas, including access to Thorn Grove Primary School.',
-                links: [
-                    {
-                        title: 'Announcement',
-                        href: 'https://www.manchestereveningnews.co.uk/news/greater-manchester-news/cycling-walking-masterplan-routes-chorlton-14930463'
-                    }
-                ]
-            },
-            {
                 id: 'brinnington',
-                name: 'Brinnington to Stockport Centre',
+                name: 'Lower Bredbury to Brinnington',
                 cost: '£0.11m',
                 type: 'Upgaded Bridleway and Underpass',
-                currentState: 0,
+                currentState: 1,
                 worksStart: 'TBC',
                 worksEnd: 'TBC',
                 details: 'Linking to improvements taking place across Stockport through the Town Centre Access Plan (TCAP), this project will upgrade a footpath to bridleway status as well as the refurbishment of an existing M60 underpass with new lighting and resurfacing.',
@@ -526,31 +514,47 @@ const progress = [
                     {
                         title: 'Announcement',
                         href: 'https://www.manchestereveningnews.co.uk/news/greater-manchester-news/cycling-walking-masterplan-routes-chorlton-14930463'
-                    }
+                    },
+                    {
+                        title: 'Consultation',
+                        href: 'https://consultation.stockport.gov.uk/policy-performance-and-reform/mayors-cycling-and-walking-challenge-fund/consultation/subpage.2019-09-30.0963201751/'
+                    },
+                    {
+                        title: 'Consultation Drop-In Details',
+                        href: 'https://consultation.stockport.gov.uk/policy-performance-and-reform/mayors-cycling-and-walking-challenge-fund/'
+                    },
                 ]
             },
             {
                 id: 'hazelgrove',
-                name: 'Hazel Grove',
+                name: 'Hazel Grove Links',
                 cost: '£0.9m',
                 type: 'Bridge and Surface Improvements',
-                currentState: 0,
+                currentState: 1,
                 worksStart: 'TBC',
                 worksEnd: 'TBC',
-                details: 'The project will improve on foot and bike access to Hazel Grove centre and area around the rail station.',
+                details: 'A package of measures is proposed to link communities and enhance walking and cycling use on off-road routes around Hazel Grove, particularly in Torkington Park and to improve access to Hazel Grove Station.<br />A number of ‘Filter Points’ are proposed; a Filter point allows pedestrians and cyclists to continue along a street but prevents motor vehicles from travelling all the way through.',
                 links: [
                     {
                         title: 'Announcement',
                         href: 'https://tfgm.com/press-release/six-new-cycling-and-walking-projects'
-                    }
+                    },
+                    {
+                        title: 'Consultation',
+                        href: 'https://consultation.stockport.gov.uk/policy-performance-and-reform/mayors-cycling-and-walking-challenge-fund/consultation/subpage.2019-09-30.0272660018/'
+                    },
+                    {
+                        title: 'Consultation Drop-In Details',
+                        href: 'https://consultation.stockport.gov.uk/policy-performance-and-reform/mayors-cycling-and-walking-challenge-fund/'
+                    },
                 ]
             },
             {
                 id: 'a555',
-                name: 'A555 Airport Road Links',
-                cost: '£1.4m',
-                type: 'New shared path and Three crossings',
-                currentState: 0,
+                name: 'A555 Community Links',
+                cost: '£1.5m',
+                type: 'New shared path and Four crossings',
+                currentState: 1,
                 worksStart: 'TBC',
                 worksEnd: 'TBC',
                 details: 'This project increases the connectivity on foot or by bike of communities near the newly built A6 MARR corridor, including Heald Green, Stanley Green and Bramhall. This includes a 1.4 mile shared walking and cycling path and three new crossings for people walking and cycling.',
@@ -558,15 +562,23 @@ const progress = [
                     {
                         title: 'Announcement',
                         href: 'https://www.forbes.com/sites/carltonreid/2019/03/21/cyclesnake-style-bridge-planned-for-stockport-as-part-of-bee-network-proposals/#1557b885243d'
-                    }
+                    },
+                    {
+                        title: 'Consultation',
+                        href: 'https://consultation.stockport.gov.uk/policy-performance-and-reform/mayors-cycling-and-walking-challenge-fund/consultation/subpage.2019-09-30.2698665351/'
+                    },
+                    {
+                        title: 'Consultation Drop-In Details',
+                        href: 'https://consultation.stockport.gov.uk/policy-performance-and-reform/mayors-cycling-and-walking-challenge-fund/'
+                    },
                 ]
             },
             {
                 id: 'hazelgrovebramhall',
-                name: 'A5143 Hazel Grove/Bramhall Link',
+                name: 'Bramhall Park to A6',
                 cost: '£4.1m',
-                type: '3.5km Superhighway + Junctions',
-                currentState: 0,
+                type: '4km Superhighway + Junctions',
+                currentState: 1,
                 worksStart: 'TBC',
                 worksEnd: 'TBC',
                 details: 'Plugging an important gap in the network between Bramhall Park and Hazel Grove, this project will provide over two miles of new safe cycle route protected from traffic on the A5143 Jacksons Lane/Dean Lane including two signalised junction upgrades, seven minor junction upgrades, new crossings for people walking and cycling, bus stop-bypasses and cycle parking.',
@@ -574,23 +586,39 @@ const progress = [
                     {
                         title: 'Announcement',
                         href: 'https://www.forbes.com/sites/carltonreid/2019/03/21/cyclesnake-style-bridge-planned-for-stockport-as-part-of-bee-network-proposals/#1557b885243d'
-                    }
+                    },
+                    {
+                        title: 'Consultation',
+                        href: 'https://consultation.stockport.gov.uk/policy-performance-and-reform/mayors-cycling-and-walking-challenge-fund/consultation/subpage.2019-09-30.1465366097/'
+                    },
+                    {
+                        title: 'Consultation Drop-In Details',
+                        href: 'https://consultation.stockport.gov.uk/policy-performance-and-reform/mayors-cycling-and-walking-challenge-fund/'
+                    },
                 ]
             },
             {
                 id: 'heatons',
-                name: 'The Heatons',
+                name: 'The Heatons Cycle Link',
                 cost: '£2.2m',
                 type: '3.5km Quietway + Junctions',
-                currentState: 0,
+                currentState: 1,
                 worksStart: 'TBC',
                 worksEnd: 'TBC',
-                details: 'This project will create quiet routes that will connect the communities of Heaton Chapel, Heaton Moor and Heaton Mersey for journeys on foot and by bike. It will also link the Fallowfield Loop and the Trans Pennine Trail. This includes 1.9 miles of off-road paths, 12 minor junction upgrades, two signalised junction upgrades, new and upgraded crossings for people walking and cycling, modal filter points and cycle parking.',
+                details: 'The Heatons Cycle Link proposals are a package of measures to create a route of quiet streets and off-road paths between the Manchester Cycleway (Fallowfield Loop) and the Trans Pennine trail. It includes residential streets, off road paths and new crossings to navigate busy roads.',
                 links: [
                     {
                         title: 'Announcement',
                         href: 'https://www.forbes.com/sites/carltonreid/2019/03/21/cyclesnake-style-bridge-planned-for-stockport-as-part-of-bee-network-proposals/#1557b885243d'
-                    }
+                    },
+                    {
+                        title: 'Consultation',
+                        href: 'https://consultation.stockport.gov.uk/policy-performance-and-reform/mayors-cycling-and-walking-challenge-fund/consultation/subpage.2019-09-30.6289455956/'
+                    },
+                    {
+                        title: 'Consultation Drop-In Details',
+                        href: 'https://consultation.stockport.gov.uk/policy-performance-and-reform/mayors-cycling-and-walking-challenge-fund/'
+                    },
                 ]
             },
             {
@@ -634,7 +662,7 @@ const progress = [
                 name: 'Heaton Norris M60 Bridge',
                 cost: '£6.8m',
                 type: 'Walking & Cycling Bridge over M60',
-                currentState: 0,
+                currentState: 1,
                 worksStart: 'TBC',
                 worksEnd: 'TBC',
                 details: 'A new cycling and walking bridge will replace the existing narrow, unattractive pedestrian bridge over the M60 on a key route linking Heaton Norris with Stockport town centre. This scheme also includes a new path within Heaton Norris park, a signalised junction upgrade and one parallel crossing.',
@@ -644,17 +672,25 @@ const progress = [
                         href: 'https://tfgm.com/press-release/bee-network-tranche-five-announced'
                     },
                     {
+                        title: 'Consultation',
+                        href: 'https://consultation.stockport.gov.uk/policy-performance-and-reform/mayors-cycling-and-walking-challenge-fund/consultation/subpage.2019-09-30.4478128697/'
+                    },
+                    {
+                        title: 'Consultation Drop-In Details',
+                        href: 'https://consultation.stockport.gov.uk/policy-performance-and-reform/mayors-cycling-and-walking-challenge-fund/'
+                    },
+                    {
                         title: 'Visualisation',
                         href: 'https://tfgm.com/made-to-move/visualise-the-future'
                     }
                 ]
             },
             {
-                id: 'hempshawlane',
-                name: 'Hempshaw Lane',
+                id: 'offertonstockport',
+                name: 'Offerton to Stockport',
                 cost: '£1.2m',
                 type: 'Quietway + Crossings and Links',
-                currentState: 0,
+                currentState: 1,
                 worksStart: 'TBC',
                 worksEnd: 'TBC',
                 details: 'This scheme will provide new crossings as well as delivering a new walking and cycling route through St. Thomas’ Recreation Ground.',
@@ -662,7 +698,39 @@ const progress = [
                     {
                         title: 'Announcement',
                         href: 'https://tfgm.com/press-release/bee-network-tranche-five-announced'
-                    }
+                    },
+                    {
+                        title: 'Consultation',
+                        href: 'https://consultation.stockport.gov.uk/policy-performance-and-reform/mayors-cycling-and-walking-challenge-fund/consultation/subpage.2019-09-30.3534585985/'
+                    },
+                    {
+                        title: 'Consultation Drop-In Details',
+                        href: 'https://consultation.stockport.gov.uk/policy-performance-and-reform/mayors-cycling-and-walking-challenge-fund/'
+                    },
+                ]
+            },
+            {
+                id: 'cheadlehulme',
+                name: 'Cheadle Hulme Crossings',
+                cost: '£0.7m',
+                type: 'Crossings',
+                currentState: 1,
+                worksStart: 'TBC',
+                worksEnd: 'TBC',
+                details: 'Linking Cheadle Hulme and Cheadle Heath, this package of crossings will improve local connectivity making local trips on foot and by bike more attractive. The project includes four junction upgrades, two new crossings for people walking and cycling, 15 cycle parking spaces, two filtered neighbourhoods and one new access ramp.',
+                links: [
+                    {
+                        title: 'Announcement',
+                        href: 'https://www.stockport.gov.uk/news/stockport-to-benefit-from-bumper-boost-to-the-bee-network-gbp137-million'
+                    },
+                    {
+                        title: 'Consultation',
+                        href: 'https://consultation.stockport.gov.uk/policy-performance-and-reform/mayors-cycling-and-walking-challenge-fund/consultation/subpage.2019-09-30.3949733871/'
+                    },
+                    {
+                        title: 'Consultation Drop-In Details',
+                        href: 'https://consultation.stockport.gov.uk/policy-performance-and-reform/mayors-cycling-and-walking-challenge-fund/'
+                    },
                 ]
             }
         ]
@@ -983,6 +1051,7 @@ function renderBorough(i) {
             <div class="boroughheader">
                 <img src="img/headers/${borough.title}.png" />
                 <h1>${borough.title}</h1>
+                <p>Total Schemes Value: £${countCash(borough)}m</p>
             </div>
             <div id="container">
                 ${borough.schemes ? borough.schemes.map(scheme => `
@@ -999,11 +1068,11 @@ function renderBorough(i) {
                             </div>
                             <div class="box statebox">
                                 <span class="boxheader stateheader">Current State:</span>
-                                <span class="boxcontent statecontent">${scheme.currentState===1 ? `<a href="${scheme.links[1].href}">${getStateText(scheme.currentState)}</a>` : `${getStateText(scheme.currentState)}`}</span>
+                                <span class="boxcontent statecontent">${scheme.currentState===1 ? `<a href="${scheme.links[1].href}" target="_blank">${getStateText(scheme.currentState)}</a>` : `${getStateText(scheme.currentState)}`}</span>
                                 <div class="progressbarcontainer">
                                     <ul class="progressbar">
                                         ${[...Array(6).keys()].map((i)=>`
-                                            <li class="${scheme.currentState === i?'active':''}"><div tooltip="${getStateText(i)}"></div></li>
+                                            <li class="${scheme.currentState === i?'active':''}"></li>
                                         `).join('')}
                                     </ul>
                                 </div>
@@ -1029,7 +1098,7 @@ function renderBorough(i) {
                                 <h3>Scheme Links</h3>
                                 ${scheme.links? scheme.links.map(link => `
                                         <ul>
-                                            <li><a href="${link.href}">${link.title}</a></li>
+                                            <li><a href="${link.href}" target="_blank">${link.title}</a></li>
                                         </ul>
                                 `).join(''):`
                                     <h3>No links yet!</h3>
@@ -1044,7 +1113,6 @@ function renderBorough(i) {
     document.querySelector('.loader').style.display = 'none';
     document.getElementById('content').innerHTML = contentMarkup;
     boroughSelect.value = i;
-    registerTooltips();
 }
 
 function countCash(borough) {
@@ -1122,26 +1190,19 @@ function getBorough(position) {
 }
 
 function getLocation() {
+    const timeout = setTimeout(error, 4000);
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(getBorough, error);
+        timeout;
       }
     else {
         error();
     }
 
     function error() {
+        clearTimeout(timeout)
         renderBorough(0);
     }
-}
-
-function registerTooltips() {
-    const tooltips = document.querySelectorAll('[tooltip]');
-    console.log(tooltips);
-    tooltips.forEach(tooltip => {
-        tooltip.addEventListener('mouseover', (e) => {
-        return lol    
-        })
-    })
 }
 
 document.addEventListener('DOMContentLoaded', () => {

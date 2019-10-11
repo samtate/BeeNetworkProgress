@@ -73,14 +73,28 @@ select {
     text-transform: capitalize;
     color: white;
     position: absolute;
-    top: 50%;
+    top: 33%;
     left: 50%;
     transform: translate(-50%,-50%);
     margin: 0;
-    text-shadow: 3px 3px 3px #000000;
+    text-shadow: 3px 3px 5px #000000;
+}
+.boroughheader p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 32px;
+    color: white;
+    position: absolute;
+    top: 66%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: 0;
+    text-shadow: 3px 3px 5px #000000;
+    width: 100%;
+    text-align: center;
 }
 .boroughheader img {
     position: absolute;
+    filter: brightness(0.6);
     top: 0;
     object-fit: cover;
     width: 100%;
