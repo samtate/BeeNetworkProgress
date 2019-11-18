@@ -35,21 +35,38 @@ class SchemeItem extends Component {
     name: this.props.scheme.name,
     cost: this.props.scheme.cost,
     type: this.props.scheme.type,
-    currentState: this.props.currentState,
-    worksStart: this.props.worksStart,
-    worksEnd: this.props.worksEnd,
+    currentState: this.props.scheme.currentState,
+    worksStart: this.props.scheme.worksStart,
+    worksEnd: this.props.scheme.worksEnd,
+    details: this.props.scheme.details,
+    links: this.props.scheme.links
   }
 
   doToggleEditMode = () => {
-    this.setState({ editMode: !this.state.editMode });
+    if (this.state.editMode) {
+      this.setState({ editMode: false });
+    } else {
+      this.setState({ editMode: true });
+      this.setState({ active: true });
+    }
   }
 
   doToggleActive = () => {
     this.setState({ active: !this.state.active });
+    if (this.state.editMode) {
+      this.setState({ editMode: false });
+    }
   }
 
   onEditChangeText = e => {
     this.setState({ [e.target.name]: e.target.value })
+  }
+
+  onChangeLinks = (e,i) => {
+    let newLinks = [...this.state.links]
+    if (e.target.name === 'href') newLinks[i].href=e.target.value;
+    if (e.target.name === 'title') newLinks[i].title=e.target.value;
+    this.setState({ links: newLinks })
   }
 
   getStateText = currentState => {
@@ -108,32 +125,58 @@ class SchemeItem extends Component {
           </StatsBox>
           <StateBox>
             <StateHeader>Current State:</StateHeader>
-            <StateContent>
-              {scheme.currentState === 1 ? (
-                <>
-                  <a href={scheme.links[1].href} target="_blank" rel="noopener noreferrer">{this.getStateText(scheme.currentState)}</a>
-                </>
-              ) : (
-                <>
-                  {this.getStateText(scheme.currentState)}
-                </>
-              )}
-            </StateContent>
-            <ProgressBarContainer>
-              <ProgressBar>
-                {[...Array(6).keys()].map(i => (
-                  <ProgressLi key={i} className={scheme.currentState===i ? 'active' : ''} />
-                ))}
-              </ProgressBar>
-            </ProgressBarContainer>
+            {!this.state.editMode ? (
+              <>
+                <StateContent>
+                  {scheme.currentState === 1 ? (
+                    <>
+                      <a href={scheme.links[1].href} target="_blank" rel="noopener noreferrer">{this.getStateText(scheme.currentState)}</a>
+                    </>
+                  ) : (
+                    <>
+                      {this.getStateText(scheme.currentState)}
+                    </>
+                  )}
+                </StateContent>
+                <ProgressBarContainer>
+                  <ProgressBar>
+                    {[...Array(6).keys()].map(i => (
+                      <ProgressLi key={i} className={scheme.currentState===i ? 'active' : ''} />
+                    ))}
+                  </ProgressBar>
+                </ProgressBarContainer>
+              </>
+            ) : (
+              <input
+              name="currentState"
+              value={this.state.currentState}
+              onChange={e => this.onEditChangeText(e)}
+              />
+            )}
           </StateBox>
           <Box>
             <WorksHeader>Works {scheme.currentState >= 4? `Started`:`Start`}:</WorksHeader>
-            <WorksContent>{scheme.worksStart}</WorksContent>
+            {!this.state.editMode ? (
+              <WorksContent>{scheme.worksStart}</WorksContent>
+            ) : (
+              <input
+                name="worksStart"
+                value={this.state.worksStart}
+                onChange={e => this.onEditChangeText(e)}
+              />
+            )}
           </Box>
           <Box>
             <WorksHeader>Works {scheme.currentState === 5? `Ended`:`End`}:</WorksHeader>
-            <WorksContent>{scheme.worksEnd}</WorksContent>
+            {!this.state.editMode ? (
+              <WorksContent>{scheme.worksEnd}</WorksContent>
+            ) : (
+              <input
+                name="worksEnd"
+                value={this.state.worksEnd}
+                onChange={e => this.onEditChangeText(e)}
+              />
+            )}
           </Box>
           <MoreInfoContainer>
             <MoreInfoBtn
@@ -148,18 +191,48 @@ class SchemeItem extends Component {
         <InfoBox className={this.state.active ? 'active' : ''}>
           <SchemeDetails>
             <SchemeDetailsHeader>Scheme Details:</SchemeDetailsHeader>
-            <SchemeDetailsContent>{scheme.details}</SchemeDetailsContent>
+            {!this.state.editMode ? (
+              <SchemeDetailsContent>{scheme.details}</SchemeDetailsContent>
+            ) : (
+              <textarea
+                name="details"
+                value={this.state.details}
+                onChange={e => this.onEditChangeText(e)}
+              />
+            )}
           </SchemeDetails>
           <SchemeLinks>
             <SchemeLinksHeader>Scheme Links:</SchemeLinksHeader>
-            {scheme.links ? scheme.links.map(link =>
-              <SchemeLinksList key={link.title}>
-                <SchemeLinkLi>
-                  <a href={link.href} target="_blank" rel="noopener noreferrer">{link.title}</a>
-                </SchemeLinkLi>
-              </SchemeLinksList>
+            {!this.state.editMode ? (
+              <>
+                {scheme.links ? scheme.links.map(link => (
+                    <SchemeLinksList key={link.title}>
+                      <SchemeLinkLi>
+                        <a href={link.href} target="_blank" rel="noopener noreferrer">{link.title}</a>
+                      </SchemeLinkLi>
+                    </SchemeLinksList>
+                  )
+                ) : (
+                  <SchemeLinksHeader>No links yet!</SchemeLinksHeader>
+                )}
+              </>
             ) : (
-              <SchemeLinksHeader>No links yet!</SchemeLinksHeader>
+              <>
+                {this.state.links.map((link, i) =>
+                  <React.Fragment key={link.title}>
+                    <input
+                      name="href"
+                      value={this.state.links[i].href}
+                      onChange={(e) => this.onChangeLinks(e,i)}
+                    />
+                    <input
+                      name="title"
+                      value={this.state.links[i].title}
+                      onChange={(e) => this.onChangeLinks(e,i)}
+                    />
+                  </React.Fragment>
+                )}
+              </>
             )}
           </SchemeLinks>
         </InfoBox>
