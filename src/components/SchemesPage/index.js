@@ -6,9 +6,9 @@ import { BoroughHeader, BoroughImage, BoroughTitle, BoroughValue, Container, Con
 
 import { withFirebase } from '../Firebase';
 
-const SchemesPage = ({ borough }) => (
+const SchemesPage = ({ borough, authUser }) => (
   <Content>
-    <Schemes borough={borough} />
+    <Schemes borough={borough} authUser={authUser} />
   </Content>
 );
 
@@ -54,13 +54,15 @@ class SchemesBase extends Component {
 
   render() {
     const { borough, schemes, loading } = this.state;
+    const { authUser } = this.props
+    console.log(authUser)
 
     return (
       <>
       {loading ? (
         <>
-          <div class="loader">
-            <div class="lds-ripple"><div></div><div></div></div>
+          <div className="loader">
+            <div className="lds-ripple"><div></div><div></div></div>
             <span>Loading...</span>
           </div>
         </>
@@ -73,7 +75,7 @@ class SchemesBase extends Component {
                 <BoroughTitle>{borough.title}</BoroughTitle>
                 <BoroughValue>Total Schemes Value: £{this.countCash(borough)}m</BoroughValue>
               </BoroughHeader>
-              <SchemeList schemes={schemes} loading={loading} />
+              <SchemeList schemes={schemes} loading={loading} authUser={authUser} />
             </>
           ) : (
             <></>
@@ -85,18 +87,19 @@ class SchemesBase extends Component {
   }
 }
 
-function SchemeList({ schemes, loading }) {
+function SchemeList({ schemes, loading, authUser }) {
   return (
     <>
       <Container>
-      {schemes ? (
-        schemes.map((scheme, i) => (
-          <SchemeItem
-            scheme={scheme}
-            key={i}
-          />
-        ))) : ('')
-      }
+        {schemes ? (
+          schemes.map((scheme, i) => (
+            <SchemeItem
+              scheme={scheme}
+              key={i}
+              authUser={authUser}
+            />
+          ))) : ('')
+        }
       </Container>
       <Footer loading={loading} />
     </>

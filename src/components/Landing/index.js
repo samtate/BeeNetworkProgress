@@ -16,7 +16,7 @@ const Landing = ({ history }) => {
       <Container>
         {boroughs.map(borough => (
           <Card key={borough} onClick={() => doUpdateHistory(borough)}>
-            <BoroughBackground src={`/beenetwork/img/headers/${borough}.png`} />
+            <BoroughBackground src={`/beenetwork/img/thumbs/${borough}.jpg`} />
             <BoroughHeader>{borough}</BoroughHeader>
           </Card>
         ))}

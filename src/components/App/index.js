@@ -6,12 +6,12 @@ import {
 
 import Landing from '../Landing';
 import Content from '../Content';
+import SignIn from '../SignIn'
 
 import * as ROUTES from '../../constants/routes';
+import { withAuthentication } from '../Session';
 
 const App = ({ firebase }) => {
-
-
   return (
     <Router basename="">
       <Route exact path={ROUTES.LANDING} render={(props) => <Landing {...props} firebase={firebase}/>} />
@@ -25,8 +25,9 @@ const App = ({ firebase }) => {
       <Route path={ROUTES.TAMESIDE} render={(props) => <Content {...props} borough={'tameside'} firebase={firebase}/>} />
       <Route path={ROUTES.TRAFFORD} render={(props) => <Content {...props} borough={'trafford'} firebase={firebase}/>} />
       <Route path={ROUTES.WIGAN} render={(props) => <Content {...props} borough={'wigan'} firebase={firebase}/>} />
+      <Route path={ROUTES.SIGNIN} component={SignIn} />
     </Router>
   );
 }
 
-export default App;
+export default withAuthentication(App);

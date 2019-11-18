@@ -2,7 +2,9 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 
 import SchemesPage from '../SchemesPage';
-import Header from '../Header'
+import Header from '../Header';
+import { withAuthentication } from '../Session';
+import { AuthUserContext } from '../Session';
 
 const Content = ({ firebase, borough, history }) => {
   const doUpdateBorough = (e) => {
@@ -11,9 +13,13 @@ const Content = ({ firebase, borough, history }) => {
   return (
   <>
     <Header doUpdateBorough={doUpdateBorough} borough={borough} />
-    <SchemesPage borough={borough} firebase={firebase}/>
+    <AuthUserContext.Consumer>
+      {authUser => (
+        <SchemesPage borough={borough} firebase={firebase} authUser={authUser}/>
+      )}
+    </AuthUserContext.Consumer>
   </>
   )
 }
 
-export default withRouter(Content);
+export default withRouter(withAuthentication(Content));

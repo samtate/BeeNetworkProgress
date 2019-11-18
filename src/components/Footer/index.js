@@ -4,8 +4,10 @@ import {
   FooterLinks,
   FooterLink
 } from './styled.js';
+import { withAuthentication } from '../Session';
+import { AuthUserContext } from '../Session';
 
-const FooterBar = ({ loading }) => {
+const FooterBar = ({ loading, firebase, authUser }) => {
 
   return (
     <Footer className={loading ? 'hidden' : ''}>
@@ -14,7 +16,14 @@ const FooterBar = ({ loading }) => {
         <FooterLink href="https://twitter.com/mcrcyclesam"><span className="socicon-twitter"></span></FooterLink>
         <FooterLink href="https://github.com/samtate/BeeNetworkProgress"><span className="socicon-github"></span></FooterLink>
       </FooterLinks>
+      <AuthUserContext.Consumer>
+        {authUser =>
+          <>
+           {authUser ? <button onClick={firebase.doSignOut}>Sign Out</button> : '' }
+          </>
+        }
+      </AuthUserContext.Consumer>
     </Footer>
   );
 }
-export default FooterBar;
+export default withAuthentication(FooterBar);
