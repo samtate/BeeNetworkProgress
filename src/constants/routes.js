@@ -1,0 +1,12 @@
+export const LANDING = '/';
+export const BOLTON = '/bolton';
+export const BURY = '/bury';
+export const MANCHESTER = '/manchester';
+export const OLDHAM = '/oldham';
+export const ROCHDALE = '/rochdale';
+export const SALFORD = '/salford';
+export const STOCKPORT = '/stockport';
+export const TAMESIDE = '/tameside';
+export const TRAFFORD = '/trafford';
+export const WIGAN = '/wigan';
+export const HOME = '/home';
