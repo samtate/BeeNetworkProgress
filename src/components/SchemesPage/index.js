@@ -28,6 +28,7 @@ class SchemesBase extends Component {
         if (boroughObject) {
             this.setState({
               borough: boroughObject,
+              schemeIds: Object.keys(boroughObject.schemes),
               schemes: Object.values(boroughObject.schemes),
               loading: false,
             });
@@ -60,7 +61,7 @@ class SchemesBase extends Component {
   }
 
   render() {
-    const { borough, schemes, loading } = this.state;
+    const { borough, schemes, schemeIds, loading } = this.state;
     const { authUser } = this.props
 
     return (
@@ -81,7 +82,7 @@ class SchemesBase extends Component {
                 <BoroughTitle>{borough.title}</BoroughTitle>
                 <BoroughValue>Total Schemes Value: £{this.countCash(borough)}m</BoroughValue>
               </BoroughHeader>
-              <SchemeList schemes={schemes} loading={loading} authUser={authUser} borough={borough} onEditRecipe={this.onEditRecipe} firebase={this.props.firebase} />
+              <SchemeList schemes={schemes} schemeIds={schemeIds} loading={loading} authUser={authUser} borough={borough} onEditRecipe={this.onEditRecipe} firebase={this.props.firebase} />
             </>
           ) : (
             <></>
@@ -93,7 +94,7 @@ class SchemesBase extends Component {
   }
 }
 
-function SchemeList({ schemes, borough, onEditRecipe, loading, authUser, firebase }) {
+function SchemeList({ schemes, schemeIds, borough, onEditRecipe, loading, authUser, firebase }) {
   return (
     <>
       <Container>
@@ -101,10 +102,10 @@ function SchemeList({ schemes, borough, onEditRecipe, loading, authUser, firebas
           schemes.map((scheme, i) => (
             <SchemeItem
               scheme={scheme}
+              schemeId={schemeIds[i]}
               borough={borough}
               firebase={firebase}
               key={i}
-              i={i}
               authUser={authUser}
               onEditRecipe={onEditRecipe}
             />

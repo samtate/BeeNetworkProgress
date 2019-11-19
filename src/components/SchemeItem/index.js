@@ -56,6 +56,7 @@ class SchemeItem extends Component {
     this.setState({ active: !this.state.active });
     if (this.state.editMode) {
       this.setState({ editMode: false });
+      this.onEditSave();
     }
   }
 
@@ -70,6 +71,13 @@ class SchemeItem extends Component {
     this.setState({ links: newLinks })
   }
 
+  addLink = () => {
+    const newLinks = [...this.state.links]
+    const add = { href: '', title: '' }
+    newLinks.push(add)
+    this.setState({ links: newLinks })
+  }
+
   onEditSave() {
     const schemeObject = {
       name: this.state.name,
@@ -81,7 +89,7 @@ class SchemeItem extends Component {
       details: this.state.details,
       links: this.state.links
     }
-    this.props.onEditRecipe(this.props.borough, this.props.i, schemeObject, this.props.firebase)
+    this.props.onEditRecipe(this.props.borough, this.props.schemeId, schemeObject, this.props.firebase)
   }
 
   getStateText = currentState => {
@@ -143,7 +151,7 @@ class SchemeItem extends Component {
             {!this.state.editMode ? (
               <>
                 <StateContent>
-                  {scheme.currentState === 1 ? (
+                  {(scheme.currentState === 1 && scheme.links[1]) ? (
                     <>
                       <a href={scheme.links[1].href} target="_blank" rel="noopener noreferrer">{this.getStateText(scheme.currentState)}</a>
                     </>
@@ -247,6 +255,7 @@ class SchemeItem extends Component {
                     />
                   </React.Fragment>
                 )}
+                <button onClick={() => this.addLink()}>Add</button>
               </>
             )}
           </SchemeLinks>
