@@ -50,12 +50,18 @@ class SchemesBase extends Component {
         total += Number(cost);
     })
     return total.toFixed(1);
-}
+  }
+
+  onEditRecipe(borough, i, schemeObject, firebase) {
+    console.log(borough.title.toLowerCase(), i, schemeObject)
+    firebase
+      .scheme(borough.title.toLowerCase(),i)
+      .set(schemeObject);
+  }
 
   render() {
     const { borough, schemes, loading } = this.state;
     const { authUser } = this.props
-    console.log(authUser)
 
     return (
       <>
@@ -75,7 +81,7 @@ class SchemesBase extends Component {
                 <BoroughTitle>{borough.title}</BoroughTitle>
                 <BoroughValue>Total Schemes Value: £{this.countCash(borough)}m</BoroughValue>
               </BoroughHeader>
-              <SchemeList schemes={schemes} loading={loading} authUser={authUser} />
+              <SchemeList schemes={schemes} loading={loading} authUser={authUser} borough={borough} onEditRecipe={this.onEditRecipe} firebase={this.props.firebase} />
             </>
           ) : (
             <></>
@@ -87,7 +93,7 @@ class SchemesBase extends Component {
   }
 }
 
-function SchemeList({ schemes, loading, authUser }) {
+function SchemeList({ schemes, borough, onEditRecipe, loading, authUser, firebase }) {
   return (
     <>
       <Container>
@@ -95,8 +101,12 @@ function SchemeList({ schemes, loading, authUser }) {
           schemes.map((scheme, i) => (
             <SchemeItem
               scheme={scheme}
+              borough={borough}
+              firebase={firebase}
               key={i}
+              i={i}
               authUser={authUser}
+              onEditRecipe={onEditRecipe}
             />
           ))) : ('')
         }

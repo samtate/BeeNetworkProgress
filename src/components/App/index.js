@@ -13,7 +13,7 @@ import { withAuthentication } from '../Session';
 
 const App = ({ firebase }) => {
   return (
-    <Router basename="">
+    <Router>
       <Route exact path={ROUTES.LANDING} render={(props) => <Landing {...props} firebase={firebase}/>} />
       <Route path={ROUTES.BOLTON} render={(props) => <Content {...props} borough={'bolton'} firebase={firebase}/>} />
       <Route path={ROUTES.BURY} render={(props) => <Content {...props} borough={'bury'} firebase={firebase}/>} />

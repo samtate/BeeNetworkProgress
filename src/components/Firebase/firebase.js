@@ -27,5 +27,6 @@ class Firebase {
   doSignOut = () => this.auth.signOut();
 
   borough = id => this.db.ref(`${id}`);
+  scheme = (borough,scheme) => this.db.ref(`${borough}/schemes/${scheme}`);
 }
 export default Firebase;

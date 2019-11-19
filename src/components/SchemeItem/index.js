@@ -45,6 +45,7 @@ class SchemeItem extends Component {
   doToggleEditMode = () => {
     if (this.state.editMode) {
       this.setState({ editMode: false });
+      this.onEditSave()
     } else {
       this.setState({ editMode: true });
       this.setState({ active: true });
@@ -67,6 +68,20 @@ class SchemeItem extends Component {
     if (e.target.name === 'href') newLinks[i].href=e.target.value;
     if (e.target.name === 'title') newLinks[i].title=e.target.value;
     this.setState({ links: newLinks })
+  }
+
+  onEditSave() {
+    const schemeObject = {
+      name: this.state.name,
+      cost: this.state.cost,
+      type: this.state.type,
+      currentState: Number(this.state.currentState),
+      worksStart: this.state.worksStart,
+      worksEnd: this.state.worksEnd,
+      details: this.state.details,
+      links: this.state.links
+    }
+    this.props.onEditRecipe(this.props.borough, this.props.i, schemeObject, this.props.firebase)
   }
 
   getStateText = currentState => {
