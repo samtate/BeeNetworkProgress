@@ -9,4 +9,4 @@ export const STOCKPORT = '/stockport';
 export const TAMESIDE = '/tameside';
 export const TRAFFORD = '/trafford';
 export const WIGAN = '/wigan';
-export const HOME = '/home';
+export const SIGNIN = '/signin';

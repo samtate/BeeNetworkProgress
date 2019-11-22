@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import uuid from 'react-uuid';
 
 import SchemeItem from '../SchemeItem';
 import Footer from '../Footer'
@@ -6,9 +7,9 @@ import { BoroughHeader, BoroughImage, BoroughTitle, BoroughValue, Container, Con
 
 import { withFirebase } from '../Firebase';
 
-const SchemesPage = ({ borough }) => (
+const SchemesPage = ({ borough, authUser }) => (
   <Content>
-    <Schemes borough={borough} />
+    <Schemes borough={borough} authUser={authUser} />
   </Content>
 );
 
@@ -28,6 +29,7 @@ class SchemesBase extends Component {
         if (boroughObject) {
             this.setState({
               borough: boroughObject,
+              schemeIds: Object.keys(boroughObject.schemes),
               schemes: Object.values(boroughObject.schemes),
               loading: false,
             });
@@ -50,17 +52,45 @@ class SchemesBase extends Component {
         total += Number(cost);
     })
     return total.toFixed(1);
-}
+  }
+
+  onEditRecipe(borough, id, schemeObject, firebase) {
+    firebase
+      .scheme(borough.title.toLowerCase(), id)
+      .set(schemeObject);
+  }
+
+  addScheme() {
+    const newSchemeIds = [...this.state.schemeIds];
+    newSchemeIds.push(uuid());
+    this.setState({ schemeIds: newSchemeIds });
+
+    const newSchemes = [...this.state.schemes];
+    newSchemes.push({
+      cost: '0',
+      currentState: '',
+      details: '',
+      name: '',
+      type: '',
+      worksStart: '',
+      worksEnd: '',
+      links: [ {href: '', title: ''} ],
+      editMode: true,
+      active: true,
+    });
+    this.setState({ schemes: newSchemes });
+  }
 
   render() {
-    const { borough, schemes, loading } = this.state;
+    const { borough, schemes, schemeIds, loading } = this.state;
+    const { authUser } = this.props
 
     return (
       <>
       {loading ? (
         <>
-          <div class="loader">
-            <div class="lds-ripple"><div></div><div></div></div>
+          <div className="loader">
+            <div className="lds-ripple"><div></div><div></div></div>
             <span>Loading...</span>
           </div>
         </>
@@ -73,7 +103,7 @@ class SchemesBase extends Component {
                 <BoroughTitle>{borough.title}</BoroughTitle>
                 <BoroughValue>Total Schemes Value: £{this.countCash(borough)}m</BoroughValue>
               </BoroughHeader>
-              <SchemeList schemes={schemes} loading={loading} />
+              <SchemeList schemes={schemes} schemeIds={schemeIds} addScheme={() => this.addScheme()} loading={loading} authUser={authUser} borough={borough} onEditRecipe={this.onEditRecipe} firebase={this.props.firebase} />
             </>
           ) : (
             <></>
@@ -85,18 +115,26 @@ class SchemesBase extends Component {
   }
 }
 
-function SchemeList({ schemes, loading }) {
+function SchemeList({ schemes, schemeIds, addScheme, borough, onEditRecipe, loading, authUser, firebase }) {
   return (
     <>
       <Container>
-      {schemes ? (
-        schemes.map((scheme, i) => (
-          <SchemeItem
-            scheme={scheme}
-            key={i}
-          />
-        ))) : ('')
-      }
+        {schemes ? (
+          schemes.map((scheme, i) => (
+            <SchemeItem
+              scheme={scheme}
+              schemeId={schemeIds[i]}
+              borough={borough}
+              firebase={firebase}
+              key={i}
+              authUser={authUser}
+              onEditRecipe={onEditRecipe}
+            />
+          ))) : ''
+        }
+        {authUser ? (
+          <button onClick={addScheme}>Add Scheme...</button>
+        ) : ''}
       </Container>
       <Footer loading={loading} />
     </>
