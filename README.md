@@ -27,7 +27,7 @@ Due to the relative filepath on the production environment being different, imag
 
 Styling is done with Styled Components. In each component folder, add a *styled.js* file and place the styles in there.
 
-### Admin Mode
+## Admin Mode
 
 To use admin mode, visit /signin and log in with correct admin credentials. This will then re-direct you to the landing page and you can select a borough that you wish to edit.<br />
 Now you can click "Edit" on a scheme to make it editable. Make the changes necessary and then click "Save". This will push your changes live so be careful!
