@@ -30,7 +30,7 @@ import {
 
 class SchemeItem extends Component {
   state = {
-    active: false,
+    active: false || this.props.scheme.active,
     editMode: false || this.props.scheme.editMode,
     name: this.props.scheme.name,
     cost: this.props.scheme.cost,
@@ -66,14 +66,14 @@ class SchemeItem extends Component {
 
   onChangeLinks = (e,i) => {
     let newLinks = [...this.state.links]
-    if (e.target.name === 'href') newLinks[i].href=e.target.value;
     if (e.target.name === 'title') newLinks[i].title=e.target.value;
+    if (e.target.name === 'href') newLinks[i].href=e.target.value;
     this.setState({ links: newLinks })
   }
 
   addLink = () => {
     const newLinks = [...this.state.links]
-    const add = { href: '', title: '' }
+    const add = { title: '', href: '' }
     newLinks.push(add)
     this.setState({ links: newLinks })
   }
@@ -213,7 +213,7 @@ class SchemeItem extends Component {
               className={this.state.active ? 'active' : ''}
             />
             {authUser ? (
-              <button onClick={this.doToggleEditMode}>Edit</button>
+              <button onClick={this.doToggleEditMode}>{!this.state.editMode ? 'Edit' : 'Save'}</button>
             ) : ('')}
           </MoreInfoContainer>
         </SchemeSummary>
@@ -251,15 +251,15 @@ class SchemeItem extends Component {
                 {this.state.links.map((link, i) =>
                   <React.Fragment key={link.title}>
                     <input
-                      name="href"
-                      placeholder="Hyperlink Path..."
-                      value={this.state.links[i].href}
-                      onChange={(e) => this.onChangeLinks(e,i)}
-                    />
-                    <input
                       name="title"
                       placeholder="Hyperlink Title..."
                       value={this.state.links[i].title}
+                      onChange={(e) => this.onChangeLinks(e,i)}
+                    />
+                    <input
+                      name="href"
+                      placeholder="Hyperlink Path..."
+                      value={this.state.links[i].href}
                       onChange={(e) => this.onChangeLinks(e,i)}
                     />
                   </React.Fragment>

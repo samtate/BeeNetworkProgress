@@ -76,6 +76,7 @@ class SchemesBase extends Component {
       worksEnd: '',
       links: [ {href: '', title: ''} ],
       editMode: true,
+      active: true,
     });
     this.setState({ schemes: newSchemes });
   }
