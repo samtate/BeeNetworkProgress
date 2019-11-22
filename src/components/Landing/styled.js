@@ -10,7 +10,6 @@ export const Container = styled.div`
   flex-wrap: wrap;
 
   @media only screen and (max-width: 980px) {
-    height: 100%;
     min-width: 100%;
     max-width: 100%;
     padding-top: 60px;

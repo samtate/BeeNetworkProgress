@@ -31,7 +31,7 @@ import {
 class SchemeItem extends Component {
   state = {
     active: false,
-    editMode: false,
+    editMode: false || this.props.scheme.editMode,
     name: this.props.scheme.name,
     cost: this.props.scheme.cost,
     type: this.props.scheme.type,
@@ -87,7 +87,7 @@ class SchemeItem extends Component {
       worksStart: this.state.worksStart,
       worksEnd: this.state.worksEnd,
       details: this.state.details,
-      links: this.state.links
+      links: this.state.links,
     }
     this.props.onEditRecipe(this.props.borough, this.props.schemeId, schemeObject, this.props.firebase)
   }
@@ -120,6 +120,7 @@ class SchemeItem extends Component {
           ) : (
             <input
               name="name"
+              placeholder="Scheme Name..."
               value={this.state.name}
               onChange={e => this.onEditChangeText(e)}
             />
@@ -131,6 +132,7 @@ class SchemeItem extends Component {
             ) : (
               <input
                 name="cost"
+                placeholder="Scheme Cost..."
                 value={this.state.cost}
                 onChange={e => this.onEditChangeText(e)}
               />
@@ -141,6 +143,7 @@ class SchemeItem extends Component {
             ) : (
               <input
                 name="type"
+                placeholder="Scheme Type..."
                 value={this.state.type}
                 onChange={e => this.onEditChangeText(e)}
               />
@@ -172,6 +175,7 @@ class SchemeItem extends Component {
             ) : (
               <input
               name="currentState"
+              placeholder="Current State (0 - 6)"
               value={this.state.currentState}
               onChange={e => this.onEditChangeText(e)}
               />
@@ -184,6 +188,7 @@ class SchemeItem extends Component {
             ) : (
               <input
                 name="worksStart"
+                placeholder="Works Start..."
                 value={this.state.worksStart}
                 onChange={e => this.onEditChangeText(e)}
               />
@@ -196,6 +201,7 @@ class SchemeItem extends Component {
             ) : (
               <input
                 name="worksEnd"
+                placeholder="Works End..."
                 value={this.state.worksEnd}
                 onChange={e => this.onEditChangeText(e)}
               />
@@ -219,6 +225,7 @@ class SchemeItem extends Component {
             ) : (
               <textarea
                 name="details"
+                placeholder="Scheme Details..."
                 value={this.state.details}
                 onChange={e => this.onEditChangeText(e)}
               />
@@ -245,11 +252,13 @@ class SchemeItem extends Component {
                   <React.Fragment key={link.title}>
                     <input
                       name="href"
+                      placeholder="Hyperlink Path..."
                       value={this.state.links[i].href}
                       onChange={(e) => this.onChangeLinks(e,i)}
                     />
                     <input
                       name="title"
+                      placeholder="Hyperlink Title..."
                       value={this.state.links[i].title}
                       onChange={(e) => this.onChangeLinks(e,i)}
                     />

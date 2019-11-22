@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import uuid from 'react-uuid';
 
 import SchemeItem from '../SchemeItem';
 import Footer from '../Footer'
@@ -53,11 +54,30 @@ class SchemesBase extends Component {
     return total.toFixed(1);
   }
 
-  onEditRecipe(borough, i, schemeObject, firebase) {
-    console.log(borough.title.toLowerCase(), i, schemeObject)
+  onEditRecipe(borough, id, schemeObject, firebase) {
     firebase
-      .scheme(borough.title.toLowerCase(),i)
+      .scheme(borough.title.toLowerCase(), id)
       .set(schemeObject);
+  }
+
+  addScheme() {
+    const newSchemeIds = [...this.state.schemeIds];
+    newSchemeIds.push(uuid());
+    this.setState({ schemeIds: newSchemeIds });
+
+    const newSchemes = [...this.state.schemes];
+    newSchemes.push({
+      cost: '0',
+      currentState: '',
+      details: '',
+      name: '',
+      type: '',
+      worksStart: '',
+      worksEnd: '',
+      links: [ {href: '', title: ''} ],
+      editMode: true,
+    });
+    this.setState({ schemes: newSchemes });
   }
 
   render() {
@@ -82,7 +102,7 @@ class SchemesBase extends Component {
                 <BoroughTitle>{borough.title}</BoroughTitle>
                 <BoroughValue>Total Schemes Value: £{this.countCash(borough)}m</BoroughValue>
               </BoroughHeader>
-              <SchemeList schemes={schemes} schemeIds={schemeIds} loading={loading} authUser={authUser} borough={borough} onEditRecipe={this.onEditRecipe} firebase={this.props.firebase} />
+              <SchemeList schemes={schemes} schemeIds={schemeIds} addScheme={() => this.addScheme()} loading={loading} authUser={authUser} borough={borough} onEditRecipe={this.onEditRecipe} firebase={this.props.firebase} />
             </>
           ) : (
             <></>
@@ -94,7 +114,7 @@ class SchemesBase extends Component {
   }
 }
 
-function SchemeList({ schemes, schemeIds, borough, onEditRecipe, loading, authUser, firebase }) {
+function SchemeList({ schemes, schemeIds, addScheme, borough, onEditRecipe, loading, authUser, firebase }) {
   return (
     <>
       <Container>
@@ -109,8 +129,11 @@ function SchemeList({ schemes, schemeIds, borough, onEditRecipe, loading, authUs
               authUser={authUser}
               onEditRecipe={onEditRecipe}
             />
-          ))) : ('')
+          ))) : ''
         }
+        {authUser ? (
+          <button onClick={addScheme}>Add Scheme...</button>
+        ) : ''}
       </Container>
       <Footer loading={loading} />
     </>

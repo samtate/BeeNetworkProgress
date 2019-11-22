@@ -73,7 +73,7 @@ export const Content = styled.div`
   padding-bottom: 80px;
 
   @media only screen and (max-width: 980px) {
-    padding-bottom: 0px;
+    padding-bottom: 60px;
     padding-top: 50px;
   }
 `;
