@@ -4,7 +4,7 @@ export const Footer = styled.footer`
   font-family: 'Raleway';
   font-weight: 100;
   color: #404040;
-  background-color: #ffe033;
+  background-color: #e03e52;
   box-shadow: 3px 0px 5px 1px rgba(0,0,0,0.75);
   width: 100%;
   height: 60px;

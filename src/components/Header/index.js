@@ -14,7 +14,7 @@ const HeaderBar = ({ doUpdateBorough, borough }) => {
     <Header>
       <Container>
         <Logo>
-          <LogoType>Bee Network Progress</LogoType>
+          <LogoType>Walk Ride GM Progress Tracker</LogoType>
         </Logo>
         {borough ? (
           <BoroughSelect doUpdateBorough={doUpdateBorough} borough={borough} />

@@ -213,13 +213,17 @@ export const WorksContent = styled(BoxContent)`
 `;
 
 export const MoreInfoContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 15px;
+
   @media only screen and (max-width: 980px) {
     order: 5;
     width: 100%;
-    display: flex;
-    align-items: center;
     justify-content: center;
     margin-bottom: 20px;
+    margin-right: 0;
   }
 `;
 
@@ -228,13 +232,12 @@ export const MoreInfoBtn = styled.button`
   height: 50px;
   border-radius: 25px;
   border: 0;
-  background-color: #ffe033;
+  background-color: #e03e52;
   background-repeat: no-repeat;
   background-size: 15px 15px;
   background-position: center;
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjQgMTBoLTEwdi0xMGgtNHYxMGgtMTB2NGgxMHYxMGg0di0xMGgxMHoiLz48L3N2Zz4=);
   transition: 0.3s ease all;
-  margin-right: 15px;
   outline: none;
 
   &.active {
@@ -285,10 +288,34 @@ export const SchemeDetailsHeader = styled.h3`
 `;
 
 export const SchemeDetailsContent = styled.p`
+  font-size: 14px;
 `;
 
 export const SchemeLinks = styled.div`
+  width: 30%;
   @media only screen and (max-width: 980px) {
     width: 100%;
   }
+`;
+export const EditButton = styled.button`
+  width: 50px;
+  margin-top: 10px;
+  color: #38618C;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #38618C;
+  background: 0;
+`;
+
+export const EditInput = styled.input`
+  color: #38618C;
+  width: 100px;
+`;
+export const EditTextArea = styled.textarea`
+  color: #38618C;
+  width: 90%;
+  height: 90px;
+  font-size: 14px;
 `;

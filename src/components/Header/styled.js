@@ -2,10 +2,11 @@ import styled from 'styled-components'
 
 export const Header = styled.header`
   width: 100%;
-  background-color: #ffe033;
+  background-color: #e03e52;
   box-shadow: 3px 0px 5px 1px rgba(0,0,0,0.75);
   z-index: 10;
   position: fixed;
+  color: #fff;
 
   @media only screen and (max-width: 980px) {
     height: 50px;

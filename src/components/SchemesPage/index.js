@@ -45,7 +45,7 @@ class SchemesBase extends Component {
     .off();
   }
 
-  countCash(borough) {
+  countCash() {
     let total = 0
     this.state.schemes.forEach(scheme => {
         const cost = scheme.cost.match(/\d+\.?\d*/)[0];
@@ -101,9 +101,18 @@ class SchemesBase extends Component {
               <BoroughHeader>
                 <BoroughImage src={`/beenetwork/img/headers/${borough.title}.png`} />
                 <BoroughTitle>{borough.title}</BoroughTitle>
-                <BoroughValue>Total Schemes Value: £{this.countCash(borough)}m</BoroughValue>
+                <BoroughValue>Total Schemes Value: £{this.countCash()}m</BoroughValue>
               </BoroughHeader>
-              <SchemeList schemes={schemes} schemeIds={schemeIds} addScheme={() => this.addScheme()} loading={loading} authUser={authUser} borough={borough} onEditRecipe={this.onEditRecipe} firebase={this.props.firebase} />
+              <SchemeList
+                schemes={schemes}
+                schemeIds={schemeIds}
+                addScheme={() => this.addScheme()}
+                loading={loading}
+                authUser={authUser}
+                borough={borough}
+                onEditRecipe={this.onEditRecipe}
+                firebase={this.props.firebase}
+              />
             </>
           ) : (
             <></>

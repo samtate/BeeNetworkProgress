@@ -11,22 +11,18 @@ export const Select = styled.select`
   width: 200px;
   height: 60px;
   background-color: rgba(0,0,0,0);
-  border: 1px #404040 solid;
+  border: 1px #fff solid;
   border-radius: 5px;
   font-size: 22px;
   text-indent: 5px;
   font-family: 'Raleway', sans-serif;
-  font-weight: 100;
+  font-weight: 200;
+  color: #fff;
 
   @media only screen and (max-width: 980px) {
     width: 150px;
     height: 40px;
-    background-color: rgba(0,0,0,0);
-    border: 1px #404040 solid;
-    border-radius: 5px;
     font-size: 15px;
-    text-indent: 5px;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 100;
+    font-weight: 200;
   }
 `;

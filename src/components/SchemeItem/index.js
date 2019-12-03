@@ -25,7 +25,10 @@ import {
   SchemeDetails,
   SchemeDetailsHeader,
   SchemeDetailsContent,
-  SchemeLinks
+  SchemeLinks,
+  EditButton,
+  EditInput,
+  EditTextArea,
 } from './styled';
 
 class SchemeItem extends Component {
@@ -118,7 +121,7 @@ class SchemeItem extends Component {
           {!this.state.editMode ? (
           <SchemeName>{scheme.name}</SchemeName>
           ) : (
-            <input
+            <EditInput
               name="name"
               placeholder="Scheme Name..."
               value={this.state.name}
@@ -130,7 +133,7 @@ class SchemeItem extends Component {
             {!this.state.editMode ? (
               <StatsP>{scheme.cost}</StatsP>
             ) : (
-              <input
+              <EditInput
                 name="cost"
                 placeholder="Scheme Cost..."
                 value={this.state.cost}
@@ -141,7 +144,7 @@ class SchemeItem extends Component {
             {!this.state.editMode ? (
               <StatsP>{scheme.type}</StatsP>
             ) : (
-              <input
+              <EditInput
                 name="type"
                 placeholder="Scheme Type..."
                 value={this.state.type}
@@ -173,7 +176,7 @@ class SchemeItem extends Component {
                 </ProgressBarContainer>
               </>
             ) : (
-              <input
+              <EditInput
               name="currentState"
               placeholder="Current State (0 - 6)"
               value={this.state.currentState}
@@ -186,7 +189,7 @@ class SchemeItem extends Component {
             {!this.state.editMode ? (
               <WorksContent>{scheme.worksStart}</WorksContent>
             ) : (
-              <input
+              <EditInput
                 name="worksStart"
                 placeholder="Works Start..."
                 value={this.state.worksStart}
@@ -199,7 +202,7 @@ class SchemeItem extends Component {
             {!this.state.editMode ? (
               <WorksContent>{scheme.worksEnd}</WorksContent>
             ) : (
-              <input
+              <EditInput
                 name="worksEnd"
                 placeholder="Works End..."
                 value={this.state.worksEnd}
@@ -213,7 +216,7 @@ class SchemeItem extends Component {
               className={this.state.active ? 'active' : ''}
             />
             {authUser ? (
-              <button onClick={this.doToggleEditMode}>{!this.state.editMode ? 'Edit' : 'Save'}</button>
+              <EditButton onClick={this.doToggleEditMode}>{!this.state.editMode ? 'Edit' : 'Save'}</EditButton>
             ) : ('')}
           </MoreInfoContainer>
         </SchemeSummary>
@@ -223,7 +226,7 @@ class SchemeItem extends Component {
             {!this.state.editMode ? (
               <SchemeDetailsContent>{scheme.details}</SchemeDetailsContent>
             ) : (
-              <textarea
+              <EditTextArea
                 name="details"
                 placeholder="Scheme Details..."
                 value={this.state.details}
@@ -249,14 +252,14 @@ class SchemeItem extends Component {
             ) : (
               <>
                 {this.state.links.map((link, i) =>
-                  <React.Fragment key={link.title}>
-                    <input
+                  <React.Fragment key={i}>
+                    <EditInput
                       name="title"
                       placeholder="Hyperlink Title..."
                       value={this.state.links[i].title}
                       onChange={(e) => this.onChangeLinks(e,i)}
                     />
-                    <input
+                    <EditInput
                       name="href"
                       placeholder="Hyperlink Path..."
                       value={this.state.links[i].href}
